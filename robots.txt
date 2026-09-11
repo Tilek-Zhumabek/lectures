@@ -1,0 +1,4 @@
+# Keep the site out of search engines. Anyone with the link can still read it —
+# this stops discovery, not access. See _quarto.yml for the matching noindex tag.
+User-agent: *
+Disallow: /

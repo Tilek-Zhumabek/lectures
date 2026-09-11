@@ -1,6 +1,6 @@
 # Physics lecture website
 
-A Quarto website with full lecture notes and a 28-slide vectors lecture.
+A Quarto website with full lecture notes and a 27-slide vectors lecture.
 
 ## Preview and build
 
@@ -17,33 +17,40 @@ no external scripts.
 
 ## Content and sequence
 
-The lecture retains the original conceptual argument. The notes explain the
-reasoning in full; the slides support the same lesson with drawings and shorter
-statements. The website uses forest green, sage, and a clear reading surface.
-Blue and green distinguish the two vectors, and coral marks a result or change.
+The agenda is vector arithmetic and algebra for kinematics. A short introduction
+prepares students to use addition and subtraction; the two application blocks
+receive equal space and suggested teaching time. The notes keep the reasoning
+and worked examples in full. Each block moves from a physical question to a
+drawing, component calculations, and practice.
 
-| Original material | Where it appears |
-| --- | --- |
-| The wider course: vectors, fields, tensors, quantum states | Slide 2; end of notes §5 |
-| Size and direction; the book's finite rotations | Slides 3–4; notes §1 |
-| Aida and Baurzhan: the vector versus its components | Slide 5; notes §1 |
-| Tip-to-tail and parallelogram addition | Slide 6; notes §2 |
-| Hoffmann's hunters and the physical meaning of a sum | Slides 7–8; notes §2 |
-| Apples and the distributive rule for walks | Slides 9–10; notes §3 |
-| Replacing the multiplier with time; component equations | Slides 11–13; notes §3 |
-| Differences, rates of change, and the later calculus connection | Slide 14; notes §4 |
-| The turning car and the tail-to-tail construction | Slides 15–16; notes §4 |
-| Along/perpendicular acceleration; subtraction order | Slides 17–18; notes §4 |
-| Rain, a bouncing ball, and impulse | Slides 19–20; notes §4 |
-| Scalars, distance/displacement, and the lap | Slides 3 and 21; notes §§1 and 4 |
-| Walks on a sphere, parallel transport, and curvature | Slides 22–23; notes §5 |
-| All four original problems, with worked solutions | Slides 24–27; notes §6 |
-| Six takeaways and common mistakes | Slide 28; closing notes and checklist |
+| Part | Slides | Suggested time | Content |
+| --- | --- | --- | --- |
+| 1 · Introduction | 1–5 | 6 min | Vectors across physics, including quantum mechanics and general relativity; four goals; arrows; vector versus components |
+| 2A · Addition | 6–15 | 20 min | Addition construction → hunters challenge → swimmer → apples: order and grouping → book tests order → distributive walks → motion components → two problems |
+| 2B · Subtraction | 16–25 | 20 min | Reverse and add; component differences; changes and average rates; turning car; rain; bounce; car and walk problems |
+| Finish | 26–27 | 5 min | Choose the operation; check the same four opening goals |
 
-Core explanations in the notes remain visible. Only worked solutions fold away.
-The circular-acceleration magnitude derivation remains omitted, as requested.
-Finite-interval velocity and acceleration are labelled as averages; the falling
-example states the physical assumptions needed for independent components.
+The opening and closing share four goals: add vectors, calculate with components,
+subtract vectors, and use changes to describe motion. Addition and subtraction
+each have ten slides and two worked problems. Speaker notes supply transitions
+and discussion prompts. These times are a teaching guide, not a reading timer.
+
+The hunters immediately challenge the physical meaning of the addition
+construction. The order rule is introduced with the apples and grouping; the
+book tests it afterwards. Walks then connect both arithmetic rules to components.
+The notes and speaker prompts follow this same sequence.
+
+The notes follow the same two-part structure. Their route map separates the
+short introduction from the two main applications. Core explanations stay
+visible; only worked solutions fold away. The full-lap example remains in the
+notes and the closing slide check. Advanced geometry and the circular-acceleration
+magnitude derivation are omitted. Finite-interval velocity and acceleration are
+labelled as averages; the falling example states its physical assumptions.
+
+The existing forest-green design, backgrounds, typography, and layouts are
+unchanged. New diagrams explain the two equivalent subtraction constructions
+and the component calculation. Blue and green distinguish the input vectors;
+coral marks a result or change.
 
 ## Files to edit
 
@@ -73,9 +80,10 @@ quarto preview lectures/vectors/slides.qmd --profile teach
 - On questions, open “Follow the reasoning” or “Show the solution” after discussion.
 
 Keep time for the book demonstration, the distributive-rule explanation, and
-drawing the two velocities tail to tail. The original examples remain in the
-lesson; the shorter deck comes from combining repeated introductions and removing
-divider pages.
+drawing the two velocities tail to tail. The four original practice problems remain in the
+lesson, with two placed at the end of each application block. The walk problem
+now explicitly calculates final position minus initial position. Keep addition
+and subtraction discussion time balanced; use the notes for additional depth.
 
 `strip-notes.lua` removes speaker notes from normal and share builds.
 Only the `teach` profile keeps them and enables the chalkboard.

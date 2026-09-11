@@ -29,7 +29,7 @@ parallelogram rule and familiar arithmetic laws explain how the tools work.
 :::
 
 ::: {.idea}
-**Two parts, with one main purpose**
+**Two parts**
 
 **Part 1 · Introduction to vectors.** A short introduction to what the arrows
 represent and how components describe them. This prepares the tools.
@@ -39,15 +39,11 @@ equal time and space to **combining motions** and **finding changes**, including
 practice in each. Other vector methods are outside this course's kinematics work.
 :::
 
-```{=html}
-<figure class="diagram">
-<img src="../../assets/lecture-map.svg" alt="A short introduction prepares two equally important application blocks: addition and subtraction.">
-<figcaption>The introduction prepares the tools. Most of our time goes to using them.</figcaption>
-</figure>
-```
+
+
 
 ::: {.idea}
-**Our four goals**
+**Four goals**
 
 1. **Add two vectors** and explain what their sum represents.
 2. **Calculate with components** using ordinary arithmetic and the distributive rule.
@@ -57,16 +53,8 @@ practice in each. Other vector methods are outside this course's kinematics work
 We will return to these same four goals at the end. Questions at any step are welcome.
 :::
 
-```{=html}
-<nav class="lesson-route" aria-label="Introduction, two applications, and a final check">
-<a href="#what-makes-a-vector"><span>1</span><strong>Introduction to vectors</strong><small>What the arrows mean, and how components describe them.</small></a>
-<a href="#what-addition-means"><span>2A</span><strong>Addition: combine motions</strong><small>Draw, calculate with components, then practise.</small></a>
-<a href="#subtracting-vectors"><span>2B</span><strong>Subtraction: find changes</strong><small>Draw, calculate with components, then practise.</small></a>
-<a href="#check-your-reasoning"><span>✓</span><strong>Return to our goals</strong><small>See what you can now explain and calculate.</small></a>
-</nav>
-```
 
-## Part 1 · Introduction to vectors {#what-makes-a-vector}
+## Part 1 · Introduction to vector {#what-makes-a-vector}
 
 We start by learning what an arrow represents and how to describe it with
 components. Once that is clear, we can learn to combine arrows, check what
@@ -719,24 +707,6 @@ arrow rules and ordinary arithmetic.
 | **Subtract two vectors** | Add a reversed vector, or compare tips with tails together: the turning car and rain. |
 | **Use a change to describe motion** | Subtract positions or velocities, then divide by time when needed: the walk, the lap's average velocity, and the car's average acceleration. |
 
-### A final check you can explain in words
-
-- A swimmer moves across a flowing river. **Add or subtract?** Add the swimmer's
-  velocity relative to the water to the current's velocity relative to the bank.
-- A car's direction changes. **Add or subtract?** Subtract the before velocity
-  from the after velocity.
-- The calculation feels difficult. **Where can you start?** Draw the arrows,
-  label what each means, and work with one component at a time.
-
-::: {.recap}
-**You have reached the goal: vector arithmetic for kinematics.**
-
-You can combine motions and find changes using the parallelogram rule, the
-distributive rule, and ordinary arithmetic with components. These are the vector
-tools our kinematics work needs. The motion equations tell us how the objects behave.
-
-If one step is still unclear, that gives us a useful question to discuss.
-Try explaining your drawing to someone else, or bring it to class.
 
 [Return to the lecture slides →](slides.html)
 :::

@@ -8,6 +8,8 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - robots.txt
 
 website:
   title: "Tilek Zhumabek"
@@ -31,6 +33,13 @@ website:
 # sets keep-notes: true, which only the "teach" profile does.
 filters:
   - strip-notes.lua
+
+# Unlisted, not private: readable by anyone with the link, but search engines
+# are asked to skip it. Top level so it applies to the slides as well as the
+# notes. Paired with robots.txt.
+include-in-header:
+  - text: |
+      <meta name="robots" content="noindex, nofollow">
 
 format:
   html:

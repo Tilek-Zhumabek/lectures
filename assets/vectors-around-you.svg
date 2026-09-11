@@ -1,33 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 312" role="img" aria-labelledby="title"><title id="title">Four everyday situations that use vectors: finding a route, a plane in wind, two people pushing a box, and a thrown ball</title><defs><marker id="ea" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L15 8 L1 15 Z" fill="#2a6f97"/></marker><marker id="eb" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L15 8 L1 15 Z" fill="#1e825b"/></marker><marker id="ec" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L15 8 L1 15 Z" fill="#bd5537"/></marker></defs><g font-family="Avenir Next, Segoe UI, Arial, sans-serif" font-weight="500">
-
-<rect x="14" y="10" width="216" height="232" rx="14" fill="#fffbed" stroke="#cbded0" stroke-width="2"/>
-<line x1="54" y1="188" x2="54" y2="88" stroke="#2a6f97" stroke-width="5" marker-end="url(#ea)"/>
-<line x1="54" y1="78" x2="166" y2="78" stroke="#1e825b" stroke-width="5" marker-end="url(#eb)"/>
-<line x1="54" y1="188" x2="178" y2="86" stroke="#bd5537" stroke-width="5" stroke-dasharray="9 7" marker-end="url(#ec)"/>
-<circle cx="54" cy="188" r="7" fill="#203b31"/>
-<text x="122" y="220" fill="#203b31" font-size="23" text-anchor="middle">Finding your way</text>
-
-<rect x="248" y="10" width="216" height="232" rx="14" fill="#fffbed" stroke="#cbded0" stroke-width="2"/>
-<line x1="288" y1="172" x2="408" y2="172" stroke="#2a6f97" stroke-width="5" marker-end="url(#ea)"/>
-<line x1="288" y1="172" x2="288" y2="94" stroke="#1e825b" stroke-width="5" marker-end="url(#eb)"/>
-<line x1="288" y1="172" x2="408" y2="102" stroke="#bd5537" stroke-width="5" stroke-dasharray="9 7" marker-end="url(#ec)"/>
-<text x="334" y="196" fill="#2a6f97" font-size="19">plane</text>
-<text x="300" y="82" fill="#1e825b" font-size="19">wind</text>
-<text x="356" y="220" fill="#203b31" font-size="23" text-anchor="middle">A plane in wind</text>
-
-<rect x="482" y="10" width="216" height="232" rx="14" fill="#fffbed" stroke="#cbded0" stroke-width="2"/>
-<rect x="556" y="106" width="76" height="66" rx="6" fill="#cbded0" stroke="#5f7468" stroke-width="2"/>
-<line x1="506" y1="124" x2="550" y2="124" stroke="#2a6f97" stroke-width="5" marker-end="url(#ea)"/>
-<line x1="506" y1="156" x2="550" y2="156" stroke="#1e825b" stroke-width="5" marker-end="url(#eb)"/>
-<line x1="638" y1="139" x2="694" y2="139" stroke="#bd5537" stroke-width="5" marker-end="url(#ec)"/>
-<text x="590" y="220" fill="#203b31" font-size="23" text-anchor="middle">Pushing together</text>
-
-<rect x="716" y="10" width="230" height="232" rx="14" fill="#fffbed" stroke="#cbded0" stroke-width="2"/>
-<path d="M752 194 Q830 66 912 182" fill="none" stroke="#5f7468" stroke-width="3" stroke-dasharray="8 7"/>
-<circle cx="830" cy="110" r="9" fill="#203b31"/>
-<line x1="840" y1="106" x2="906" y2="92" stroke="#2a6f97" stroke-width="5" marker-end="url(#ea)"/>
-<line x1="830" y1="122" x2="830" y2="184" stroke="#1e825b" stroke-width="5" marker-end="url(#eb)"/>
-<text x="831" y="220" fill="#203b31" font-size="23" text-anchor="middle">A thrown ball</text>
-
-<text x="480" y="294" fill="#5f7468" font-size="25" text-anchor="middle">Each one has a size and a direction, and each one gets combined with another.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1450 300" role="img" aria-labelledby="title"><title id="title">Six matching boxes: motion, forces, electricity, magnetism, general relativity with a velocity vector, and quantum mechanics with a state vector.</title><defs><marker id="blue" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L13 7 L1 13 Z" fill="#2879a0"/></marker><marker id="green" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L13 7 L1 13 Z" fill="#1e825b"/></marker><marker id="coral" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L13 7 L1 13 Z" fill="#bd5537"/></marker><marker id="muted" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L13 7 L1 13 Z" fill="#5f7468"/></marker></defs><g font-family="Avenir Next, Segoe UI, Arial, sans-serif" fill="#203b31"><rect x="10" y="10" width="225" height="275" rx="16" fill="#fffbed" stroke="#cbded0" stroke-width="2"/><text x="122" y="46" font-size="19" fill="#203b31" text-anchor="middle">MOTION</text><path d="M30 205 Q70 150 125 155 T215 188" fill="none" stroke="#cbded0" stroke-width="3"/><circle cx="125" cy="155" r="10" fill="#2879a0"/><line x1="125" y1="155" x2="196" y2="155" stroke="#2879a0" stroke-width="5" marker-end="url(#blue)"/><text x="122" y="236" font-size="24" fill="#203b31" text-anchor="middle">Velocity vector</text><rect x="250" y="10" width="225" height="275" rx="16" fill="#e9f2ea" stroke="#cbded0" stroke-width="2"/><text x="362" y="46" font-size="19" fill="#203b31" text-anchor="middle">FORCES</text><rect x="295" y="113" width="70" height="68" rx="8" fill="#cfe0cf"/><line x1="330" y1="148" x2="437" y2="148" stroke="#1e825b" stroke-width="5" marker-end="url(#green)"/><text x="362" y="236" font-size="24" fill="#203b31" text-anchor="middle">Force vector</text><rect x="490" y="10" width="225" height="275" rx="16" fill="#fffbed" stroke="#cbded0" stroke-width="2"/><text x="602" y="46" font-size="19" fill="#203b31" text-anchor="middle">ELECTRICITY</text><circle cx="548" cy="148" r="24" fill="#e3eef4"/><text x="548" y="157" font-size="30" fill="#203b31" text-anchor="middle">+</text><circle cx="602" cy="148" r="5" fill="#2879a0"/><line x1="602" y1="148" x2="685" y2="148" stroke="#2879a0" stroke-width="5" marker-end="url(#blue)"/><text x="602" y="223" font-size="23" fill="#203b31" text-anchor="middle">Electric field</text><text x="602" y="250" font-size="23" fill="#203b31" text-anchor="middle">vector</text><rect x="730" y="10" width="225" height="275" rx="16" fill="#e9f2ea" stroke="#cbded0" stroke-width="2"/><text x="842" y="46" font-size="19" fill="#203b31" text-anchor="middle">MAGNETISM</text><rect x="758" y="133" width="70" height="32" rx="5" fill="#cfe0cf"/><text x="770" y="156" font-size="20" fill="#203b31" text-anchor="start">S</text><text x="805" y="156" font-size="20" fill="#203b31" text-anchor="start">N</text><circle cx="850" cy="148" r="5" fill="#1e825b"/><line x1="850" y1="148" x2="930" y2="148" stroke="#1e825b" stroke-width="5" marker-end="url(#green)"/><text x="842" y="223" font-size="23" fill="#203b31" text-anchor="middle">Magnetic field</text><text x="842" y="250" font-size="23" fill="#203b31" text-anchor="middle">vector</text>
+<g id="relativity-card">
+<rect x="970" y="10" width="225" height="275" rx="16" fill="#fffbed" stroke="#cbded0" stroke-width="2"/>
+<text x="1082" y="38" font-size="19" text-anchor="middle">GENERAL</text>
+<text x="1082" y="63" font-size="19" text-anchor="middle">RELATIVITY</text>
+<g fill="none" stroke="#cbded0" stroke-width="2">
+<path d="M993 106 Q1082 126 1172 106 M993 135 Q1082 172 1172 135 M993 167 Q1082 210 1172 167"/>
+<path d="M1014 92 Q1005 140 1022 187 M1057 100 Q1045 149 1063 193 M1104 100 Q1117 149 1099 193 M1147 92 Q1158 140 1141 187"/>
+</g>
+<circle cx="1082" cy="153.5" r="7" fill="#2879a0"/>
+<line x1="1082" y1="153.5" x2="1154" y2="153.5" stroke="#2879a0" stroke-width="5" marker-end="url(#blue)"/>
+<text x="1082" y="236" font-size="24" text-anchor="middle">Velocity vector</text>
+<text x="1082" y="267" font-size="17" fill="#5f7468" text-anchor="middle">Motion in space and time</text>
+</g>
+<g id="quantum-card">
+<rect x="1210" y="10" width="225" height="275" rx="16" fill="#e9f2ea" stroke="#cbded0" stroke-width="2"/>
+<text x="1322" y="38" font-size="19" text-anchor="middle">QUANTUM</text>
+<text x="1322" y="63" font-size="19" text-anchor="middle">MECHANICS</text>
+<circle cx="1322" cy="144" r="51" fill="#dcecdf"/>
+<text x="1322" y="163" font-family="Georgia, serif" font-size="62" fill="#1e825b" text-anchor="middle">|ψ⟩</text>
+<text x="1322" y="236" font-size="24" text-anchor="middle">State vector</text>
+<text x="1322" y="267" font-size="17" fill="#5f7468" text-anchor="middle">Measurement chances</text>
+</g>
 </g></svg>
