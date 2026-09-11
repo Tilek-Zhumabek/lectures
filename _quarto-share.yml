@@ -1,0 +1,13 @@
+# Profile: one self-contained file, for a student with no internet.
+#
+#     quarto render lectures/vectors/slides.qmd --profile share
+#
+# Optional. The website already gives students the deck; this exists only for
+# emailing or for a room with no connection. Chalkboard must be off, because
+# reveal.js plugins cannot be inlined into a single file. Notes are stripped,
+# same as the website.
+format:
+  revealjs:
+    chalkboard: false
+    embed-resources: true
+    output-file: vectors-offline.html

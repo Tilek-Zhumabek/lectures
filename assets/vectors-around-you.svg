@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 312" role="img" aria-labelledby="title"><title id="title">Four everyday situations that use vectors: finding a route, a plane in wind, two people pushing a box, and a thrown ball</title><defs><marker id="ea" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L15 8 L1 15 Z" fill="#2a6f97"/></marker><marker id="eb" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L15 8 L1 15 Z" fill="#1e825b"/></marker><marker id="ec" markerWidth="16" markerHeight="16" refX="14" refY="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L15 8 L1 15 Z" fill="#bd5537"/></marker></defs><g font-family="Avenir Next, Segoe UI, Arial, sans-serif" font-weight="500">
+
+<rect x="14" y="10" width="216" height="232" rx="14" fill="#fffbed" stroke="#cbded0" stroke-width="2"/>
+<line x1="54" y1="188" x2="54" y2="88" stroke="#2a6f97" stroke-width="5" marker-end="url(#ea)"/>
+<line x1="54" y1="78" x2="166" y2="78" stroke="#1e825b" stroke-width="5" marker-end="url(#eb)"/>
+<line x1="54" y1="188" x2="178" y2="86" stroke="#bd5537" stroke-width="5" stroke-dasharray="9 7" marker-end="url(#ec)"/>
+<circle cx="54" cy="188" r="7" fill="#203b31"/>
+<text x="122" y="220" fill="#203b31" font-size="23" text-anchor="middle">Finding your way</text>
+
+<rect x="248" y="10" width="216" height="232" rx="14" fill="#fffbed" stroke="#cbded0" stroke-width="2"/>
+<line x1="288" y1="172" x2="408" y2="172" stroke="#2a6f97" stroke-width="5" marker-end="url(#ea)"/>
+<line x1="288" y1="172" x2="288" y2="94" stroke="#1e825b" stroke-width="5" marker-end="url(#eb)"/>
+<line x1="288" y1="172" x2="408" y2="102" stroke="#bd5537" stroke-width="5" stroke-dasharray="9 7" marker-end="url(#ec)"/>
+<text x="334" y="196" fill="#2a6f97" font-size="19">plane</text>
+<text x="300" y="82" fill="#1e825b" font-size="19">wind</text>
+<text x="356" y="220" fill="#203b31" font-size="23" text-anchor="middle">A plane in wind</text>
+
+<rect x="482" y="10" width="216" height="232" rx="14" fill="#fffbed" stroke="#cbded0" stroke-width="2"/>
+<rect x="556" y="106" width="76" height="66" rx="6" fill="#cbded0" stroke="#5f7468" stroke-width="2"/>
+<line x1="506" y1="124" x2="550" y2="124" stroke="#2a6f97" stroke-width="5" marker-end="url(#ea)"/>
+<line x1="506" y1="156" x2="550" y2="156" stroke="#1e825b" stroke-width="5" marker-end="url(#eb)"/>
+<line x1="638" y1="139" x2="694" y2="139" stroke="#bd5537" stroke-width="5" marker-end="url(#ec)"/>
+<text x="590" y="220" fill="#203b31" font-size="23" text-anchor="middle">Pushing together</text>
+
+<rect x="716" y="10" width="230" height="232" rx="14" fill="#fffbed" stroke="#cbded0" stroke-width="2"/>
+<path d="M752 194 Q830 66 912 182" fill="none" stroke="#5f7468" stroke-width="3" stroke-dasharray="8 7"/>
+<circle cx="830" cy="110" r="9" fill="#203b31"/>
+<line x1="840" y1="106" x2="906" y2="92" stroke="#2a6f97" stroke-width="5" marker-end="url(#ea)"/>
+<line x1="830" y1="122" x2="830" y2="184" stroke="#1e825b" stroke-width="5" marker-end="url(#eb)"/>
+<text x="831" y="220" fill="#203b31" font-size="23" text-anchor="middle">A thrown ball</text>
+
+<text x="480" y="294" fill="#5f7468" font-size="25" text-anchor="middle">Each one has a size and a direction, and each one gets combined with another.</text>
+</g></svg>

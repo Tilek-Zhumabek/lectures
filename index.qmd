@@ -1,0 +1,41 @@
+---
+pagetitle: "Physics lectures — Tilek Zhumabek"
+toc: false
+page-layout: full
+listing:
+  - id: lectures
+    contents: "lectures/*/index.qmd"
+    template: lecture-list.ejs
+    sort: "order asc"
+---
+
+```{=html}
+<div class="home-hero">
+  <div class="hero-copy">
+    <p class="eyebrow">PHYSICS · ASTANA IT UNIVERSITY</p>
+    <h1>Physics lectures.<br><em>Step by step.</em></h1>
+    <p class="hero-intro">I teach physics at Astana IT University. Here are my lecture slides and written notes, with drawings and full explanations to help you work through each idea.</p>
+    <a class="button primary" href="lectures/vectors/">Start with vectors <span aria-hidden="true">↗</span></a>
+    <p class="hero-footnote">Free to read. Learn at your own pace.</p>
+  </div>
+  <div class="hero-art">
+    <span class="art-label">VECTORS · WHERE WE BEGIN</span>
+    <img src="assets/vector-cover.svg" alt="An eastward arrow and a northward arrow combine into one diagonal arrow." width="600" height="470">
+    <span class="art-caption">Two movements. One displacement.</span>
+  </div>
+</div>
+<div class="section-heading">
+  <div><p class="eyebrow">THE LECTURE COLLECTION</p><h2 id="collection">Let's begin.</h2></div>
+  <p>Read the notes. Explore the slides. Try it yourself.</p>
+</div>
+```
+
+::: {#lectures}
+:::
+
+```{=html}
+<div class="welcome-note">
+  <span class="welcome-symbol" aria-hidden="true">✳</span>
+  <div><strong>Questions are part of learning.</strong><p>Found a mistake, or an explanation that is unclear? Bring it to class. Your questions help make these notes better for everyone.</p></div>
+</div>
+```

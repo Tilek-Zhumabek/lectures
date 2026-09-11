@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 210" role="img" aria-labelledby="title"><title id="title">The four steps of today's lecture: what makes a vector, adding, splitting into parts, and subtracting</title><defs><marker id="ma" markerWidth="15" markerHeight="15" refX="13" refY="7.5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L14 7.5 L1 14 Z" fill="#5f7468"/></marker></defs><g font-family="Avenir Next, Segoe UI, Arial, sans-serif" font-weight="500">
+
+<rect x="10" y="34" width="196" height="104" rx="14" fill="#fffbed" stroke="#cbded0" stroke-width="2"/>
+<text x="108" y="72" fill="#5f7468" font-size="19" text-anchor="middle">STEP 1</text>
+<text x="108" y="104" fill="#203b31" font-size="24" text-anchor="middle">What is a vector?</text>
+
+<line x1="216" y1="86" x2="242" y2="86" stroke="#5f7468" stroke-width="3" marker-end="url(#ma)"/>
+
+<rect x="252" y="34" width="196" height="104" rx="14" fill="#e9f2ea" stroke="#1e825b" stroke-width="2.5"/>
+<text x="350" y="72" fill="#5f7468" font-size="19" text-anchor="middle">STEP 2</text>
+<text x="350" y="104" fill="#1e825b" font-size="26" text-anchor="middle">Add them</text>
+
+<line x1="458" y1="86" x2="484" y2="86" stroke="#5f7468" stroke-width="3" marker-end="url(#ma)"/>
+
+<rect x="494" y="34" width="196" height="104" rx="14" fill="#fffbed" stroke="#cbded0" stroke-width="2"/>
+<text x="592" y="72" fill="#5f7468" font-size="19" text-anchor="middle">STEP 3</text>
+<text x="592" y="104" fill="#203b31" font-size="24" text-anchor="middle">Split into parts</text>
+
+<line x1="700" y1="86" x2="726" y2="86" stroke="#5f7468" stroke-width="3" marker-end="url(#ma)"/>
+
+<rect x="736" y="34" width="212" height="104" rx="14" fill="#f7ece7" stroke="#bd5537" stroke-width="2.5"/>
+<text x="842" y="72" fill="#5f7468" font-size="19" text-anchor="middle">STEP 4</text>
+<text x="842" y="104" fill="#bd5537" font-size="26" text-anchor="middle">Subtract them</text>
+
+<text x="480" y="184" fill="#203b31" font-size="24" text-anchor="middle">These four steps are all our kinematics needs.</text>
+</g></svg>

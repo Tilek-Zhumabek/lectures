@@ -1,0 +1,47 @@
+# Project configuration for the whole site.
+#
+# This is also the PUBLISHING profile. Rendering with no profile produces the
+# public site, and the public site never contains your speaker notes — see
+# strip-notes.lua. Safe by default is the point: a stray `quarto render`
+# cannot leak the answers.
+
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Tilek Zhumabek"
+  description: "Physics lectures at Astana IT University. Slides and written notes, free to read."
+  # After the first deploy, set this to the real URL. It is used for
+  # social-preview links and the sitemap; nothing breaks while it is absent.
+  # site-url: "https://<your-github-username>.github.io/lectures/"
+  favicon: assets/favicon.svg
+  navbar:
+    background: light
+    left:
+      - href: index.qmd
+        text: Lectures
+  page-footer:
+    border: false
+    left: "Tilek Zhumabek &middot; School of Intelligent Systems, Astana IT University"
+    right: "Physics, one idea at a time."
+  open-graph: true
+
+# Applied to every document. Removes ::: {.notes} blocks unless the document
+# sets keep-notes: true, which only the "teach" profile does.
+filters:
+  - strip-notes.lua
+
+format:
+  html:
+    theme:
+      light: [cosmo, theme.scss]
+      dark: [darkly, theme.scss]
+    css: styles.css
+    html-math-method: mathml
+    toc: true
+    toc-depth: 2
+    toc-title: "Your way through"
+    anchor-sections: true
+    link-external-newwindow: true
+    smooth-scroll: true

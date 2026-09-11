@@ -1,0 +1,11 @@
+# Profile: teaching.
+#
+#     quarto preview lectures/vectors/slides.qmd --profile teach
+#
+# Keeps your speaker notes and enables the chalkboard for teaching.
+# Press S for notes, the timer and the next slide. Never render
+# the whole site with this profile — that is how notes reach the internet.
+keep-notes: true
+format:
+  revealjs:
+    chalkboard: true
