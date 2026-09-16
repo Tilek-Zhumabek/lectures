@@ -1,0 +1,46 @@
+/* Original whiteboard photographs stay intact. Windows below only frame them. */
+:root { --board:#293631; --chalk:#f1f3ea; --soft:#c1d1c5; --mint:#b3dfbc; }
+.reveal-viewport { background:var(--board); }
+.reveal { color:var(--chalk); font-family:"Chalkboard SE","Chalkboard","Comic Sans MS",cursive; font-size:30px; line-height:1.45; }
+.reveal .slides { text-align:left; }
+.reveal .slides>section { height:100%; box-sizing:border-box; padding:24px 38px 55px; }
+.reveal h1,.reveal h2,.reveal h3 { color:var(--chalk); font-family:inherit; font-weight:400; text-transform:none; letter-spacing:0; }
+.reveal h2 { font-size:1.55em; line-height:1.2; margin:0 0 25px; }
+.reveal p { margin:0 0 20px; }
+.reveal a { color:var(--mint); text-underline-offset:5px; }
+.reveal a:focus-visible { outline:3px solid var(--mint); outline-offset:5px; }
+.reveal .chapter { font-family:system-ui,sans-serif; font-size:14px; letter-spacing:2px; text-transform:uppercase; color:var(--mint); margin-bottom:22px; }
+.reveal .board-grid { display:grid; grid-template-columns:1.1fr 1fr; align-items:center; gap:40px; }
+.reveal .board-grid.equal { grid-template-columns:1fr 1fr; }
+.reveal .board-grid.wide-left { grid-template-columns:1.45fr 1fr; }
+.reveal .board-window { position:relative; overflow:hidden; width:100%; background:var(--board); }
+.reveal .board-window img { position:absolute; display:block; width:var(--image-width); max-width:none; height:auto; max-height:none; left:var(--image-left); top:var(--image-top); margin:0; border:0; box-shadow:none; }
+.reveal .board-full { display:block; width:100%; height:515px; object-fit:contain; margin:0; border:0; box-shadow:none; }
+.reveal .board-full.compact { height:440px; }
+.reveal .city-window::after { content:""; position:absolute; top:0; right:0; width:26%; height:44%; background:var(--board); }
+.reveal .sum-window::after { content:""; position:absolute; bottom:0; right:0; width:24%; height:34%; background:var(--board); }
+.reveal .sequence-window { max-width:435px; margin-inline:auto; }
+.reveal #components .board-window { max-width:490px; margin-inline:auto; }
+.reveal #scalar-derivation .board-window { max-width:505px; margin-inline:auto; }
+.reveal .chalk-note { color:var(--soft); font-family:system-ui,sans-serif; font-size:21px; line-height:1.5; margin-top:20px; }
+.reveal .chalk-line { border-top:1px solid #829c88; padding-top:18px; margin-top:22px; font-size:27px; }
+.reveal .board-math { font-size:33px; }
+.reveal .board-math .math.display { margin:16px 0; }
+.reveal math { color:var(--chalk); }
+.reveal .prompt { color:var(--mint); font-size:35px; }
+.reveal .sketch { width:100%; height:310px; margin:10px 0; }
+.reveal .opening { padding-top:65px!important; }
+.reveal .opening h2 { font-size:88px; margin:30px 0; }
+.reveal .opening .lead { font-size:40px; max-width:760px; }
+.reveal .route { margin-top:45px; color:var(--mint); font-size:25px; }
+.reveal .footer { font-family:system-ui,sans-serif; color:var(--soft); font-size:13px; bottom:18px; left:38px; }
+.reveal .footer a { color:inherit; text-decoration:none; }
+.reveal .slide-number { font-family:system-ui,sans-serif; color:var(--soft); background:none; right:100px; bottom:19px; font-size:15px; }
+.reveal .controls { color:var(--mint); font-size:8px; bottom:8px; }
+.reveal .progress { color:var(--mint); height:3px; }
+.reveal .recap { display:grid; grid-template-columns:1fr 1fr; gap:25px 45px; }
+.reveal .recap p { border-top:1px solid #829c88; padding-top:15px; }
+.reveal .application h2 { margin-bottom:5px; }
+.reveal .application .chalk-note { margin:8px 0 0; font-size:19px; }
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after { transition:none!important; animation:none!important; } }
+@media print { .reveal .board-window { -webkit-print-color-adjust:exact; print-color-adjust:exact; } }

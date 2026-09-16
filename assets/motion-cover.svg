@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="title desc">
+  <title id="title">From position to motion</title>
+  <desc id="desc">Two position arrows start at Astana. A displacement arrow connects their endpoints, showing a change of position.</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="context-stroke" stroke-width="1.4"/></marker></defs>
+  <rect width="600" height="400" rx="16" fill="#293631"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M94 309 Q241 314 398 308" stroke="#f1f3ea"/>
+    <path d="M94 309 Q95 224 103 111" stroke="#f1f3ea"/>
+    <path d="M402 300 Q275 208 117 111" stroke="#b3dfbc"/>
+  </g>
+  <g fill="#f1f3ea"><circle cx="94" cy="310" r="5"/><circle cx="410" cy="307" r="5"/><circle cx="104" cy="101" r="5"/></g>
+  <g fill="#f1f3ea" font-family="Chalkboard SE, Chalkboard, Comic Sans MS, cursive" font-size="25">
+    <text x="49" y="353">Astana</text><text x="398" y="350">Almaty</text><text x="62" y="72">Karaganda</text>
+    <text x="220" y="345" font-size="20">position 1</text><text x="120" y="220" font-size="20">position 2</text>
+    <text x="282" y="176" fill="#b3dfbc">change</text>
+  </g>
+</svg>

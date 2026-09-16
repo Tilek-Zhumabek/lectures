@@ -5,3 +5,12 @@ _site/
 
 /.quarto/
 **/*.quarto_ipynb
+
+# LaTeX auxiliary files. Worksheet PDFs belong in each document's build/ folder.
+**/.latex-aux/
+**/*.aux
+**/*.fdb_latexmk
+**/*.fls
+**/*.log
+**/*.out
+**/*.synctex.gz

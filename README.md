@@ -1,6 +1,25 @@
 # Physics lecture website
 
-A Quarto website with full lecture notes and a 27-slide vectors lecture.
+A Quarto website with full lecture notes, a 27-slide vectors lecture, and a
+19-slide motion lecture built around the original handwritten whiteboards.
+
+## Motion lecture
+
+`lectures/motion/index.qmd` contains the explanations and worked examples;
+`lectures/motion/slides.qmd` contains the organised handwritten deck. The
+sequence follows the lecture's teaching order, not the whiteboard export numbers:
+position → displacement and time → constant velocity and acceleration → vector
+derivation by pairing → unit vectors and scalar derivation → projectile → incline.
+
+The five original JPEGs are preserved in `lectures/motion/boards/`. CSS windows
+frame relevant regions without modifying the originals. Opening diagrams and
+the exact interval-average step supplement the handwriting. The notes make the
+plane/3D distinction explicit and use N interval averages for N time intervals.
+
+Preview the deck with `quarto preview lectures/motion/slides.qmd --profile teach`.
+For an offline copy, use `quarto render lectures/motion/slides.qmd --profile share
+--output motion-offline.html` (the shared profile otherwise defaults to the
+vectors filename). The normal whole-site render includes both lecture cards.
 
 ## Preview and build
 

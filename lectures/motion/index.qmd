@@ -1,0 +1,718 @@
+---
+title: "Motion"
+subtitle: "From a position to the equations of motion"
+description: "Start with a point, describe a change, and derive the equations of motion twice: first with vectors, then with components."
+order: 2
+categories: [Kinematics, Second lecture]
+image: ../../assets/motion-cover.svg
+reading-time-label: "25 min"
+slide-count: 19
+title-block-categories: false
+---
+
+::: {.lecture-links}
+[Open the handwritten slides](slides.html){.button .primary}
+[Previous: Vectors](../vectors/index.html){.button .secondary}
+[All lectures](../../index.html){.button .secondary}
+:::
+
+::: {.lesson-intro}
+**Before we can describe motion, we need to say where something is.**
+Start with empty space and a single point. Give that point a name. Use it
+to locate another point. Only then ask what changes, and how long the change takes.
+
+This is our route into motion. The vector arithmetic from the
+[previous lecture](../vectors/index.html) supplies the tools; position and time
+give those tools a physical meaning.
+:::
+
+::: {.idea}
+**Two goals**
+
+1. Derive the equations of motion for constant acceleration **using vectors** and the same pairing idea that sums the numbers from 1 to 100.
+2. Derive them again **using scalar components**, then use them for a projectile and a block on an inclined plane.
+
+The handwritten slides follow this sequence. These notes explain the steps between the drawings.
+:::
+
+<nav class="lesson-route" aria-label="Route through the motion lecture">
+<a href="#position"><span>01</span><strong>Where is the point?</strong><small>Origin, distance, direction</small></a>
+<a href="#change"><span>02</span><strong>What changes with time?</strong><small>Displacement, velocity, acceleration</small></a>
+<a href="#vector-derivation"><span>03</span><strong>Derive with vectors</strong><small>Equal intervals and paired velocities</small></a>
+<a href="#components"><span>04</span><strong>Derive with numbers</strong><small>Unit vectors and scalar components</small></a>
+<a href="#projectile"><span>05</span><strong>Projectile motion</strong><small>Find the height of the highest point</small></a>
+<a href="#incline"><span>06</span><strong>The inclined plane</strong><small>Choose axes along the surface</small></a>
+</nav>
+
+## 1 · Begin with position {#position}
+
+### A point and a name
+
+Imagine an empty space containing a single point. What should we call it?
+There is no preferred label. We could use a word, a number, or a symbol.
+Let us call it **Astana**.
+
+Now make a second choice: use this point as our **origin**, the reference
+from which we describe other positions. A name identifies the point;
+choosing it as an origin gives it a role in our description.
+
+We still have freedom to place another point. But we now have a reference
+relative to which we can give instructions about its location.
+Choosing an origin alone does not yet choose our directions or units.
+
+### Distance leaves infinitely many choices
+
+Suppose the instruction is:
+
+> Put a second point 1,000 km from Astana.
+
+On a flat plane, this describes a whole **circle** centred on Astana.
+Every point on that circle satisfies the instruction. There are infinitely
+many possible answers.
+
+If we really allow all three dimensions, the possible points form a **sphere**.
+For the drawings in this lecture, we work in a plane.
+
+Now add the missing information:
+
+> Put it 1,000 km from Astana, in this direction.
+
+A distance and a specified direction select one endpoint. Call it **Almaty**.
+The arrow from Astana to that endpoint is its **position vector**.
+
+We can locate **Karaganda** in the same way, with another position vector
+starting at the same origin.
+
+::: {.idea}
+**A position vector goes from the chosen origin to the point.**
+Its magnitude tells us how far the point is from that origin;
+its direction tells us which way to look.
+
+Here the city names are labels on an ideal flat diagram. The distance is
+illustrative, and the drawn directions are not a geographical map.
+:::
+
+### The description depends on the reference
+
+Choose a different origin and the position vector changes, even if the point
+itself stays put. Nothing has moved just because we chose a different reference.
+
+For now, choose one origin and keep it fixed. Later, choose fixed coordinate
+directions too. Together these let us compare positions consistently.
+
+::: {.bridge}
+A position tells us where something is. To describe motion, we need to
+compare its position at two times.
+:::
+
+## 2 · From a position to a change {#change}
+
+### Displacement is final position minus initial position
+
+Suppose an object starts at Almaty and ends at Karaganda. Write its position
+vectors, measured from Astana, as $\vec r_1$ and $\vec r_2$.
+Its **displacement** is
+
+$$
+\Delta\vec r=\vec r_2-\vec r_1.
+$$
+
+The displacement arrow starts at the object's initial position and ends at
+its final position. It does not generally start at our origin.
+
+<figure class="diagram">
+<img src="../../assets/motion-cover.svg" alt="Astana is the common origin of two position arrows. The change arrow goes from Almaty to Karaganda.">
+<figcaption>Two positions share an origin. Their difference connects the initial point to the final point.</figcaption>
+</figure>
+
+The same subtraction works after a shift to another fixed origin: both
+position vectors change by the same amount, which cancels in their difference.
+Position depends on the origin; displacement between these endpoints does
+not depend on where we put a fixed origin.
+
+**Displacement is not distance travelled.** Different routes between the
+same endpoints have the same displacement but can have different lengths.
+
+### Bring in time
+
+If the displacement occurs in an elapsed time $\Delta t>0$, the **average
+velocity** is
+
+$$
+\bar{\vec v}=\frac{\Delta\vec r}{\Delta t}.
+$$
+
+It describes the rate of the overall change of position over that interval.
+Average **speed**, in contrast, is total distance travelled divided by elapsed
+time. For a journey that changes direction, average speed generally differs
+from the magnitude of average velocity.
+
+The velocity at a particular instant describes the motion at that moment.
+We distinguish it from an average over a whole interval whenever velocity changes.
+
+### Constant velocity: the direction can be stored in an axis
+
+A constant velocity vector has a fixed **magnitude** and a fixed **direction**.
+Therefore
+
+$$
+\Delta\vec r=\vec v\,\Delta t.
+$$
+
+Choose the positive $x$ direction along the motion. Since that direction stays
+fixed, we can remember it through our choice of axis and calculate with the
+single component:
+
+$$
+\Delta x=v_x\,\Delta t.
+$$
+
+For travel in that positive direction, this is the familiar
+**distance = speed × time**. We have stored the direction in the coordinate
+choice. Signed components continue to tell us which way motion points.
+
+Constant **speed** by itself is weaker. An object moving around a circle can
+keep the same speed while its velocity changes direction.
+
+### Constant acceleration: equal changes in equal times
+
+Acceleration describes how velocity changes. Its average over an interval is
+
+$$
+\bar{\vec a}=\frac{\Delta\vec v}{\Delta t}.
+$$
+
+If acceleration is the same vector throughout the motion, then
+
+$$
+\Delta\vec v=\vec a\,\Delta t.
+$$
+
+Set the initial time to zero and let $\vec v_0$ be the initial velocity.
+The elapsed time is then $t$, so
+
+$$
+\boxed{\vec v(t)=\vec v_0+\vec a\,t.}
+$$
+
+This is our first equation of motion. Equal time intervals add equal velocity
+vectors. Both the magnitude **and direction** of $\vec a$ must stay fixed
+for this constant-acceleration form.
+
+The velocity need not stay parallel to the acceleration, or even keep its own
+direction. A projectile will show this clearly.
+
+::: {.bridge}
+We know the velocity at each time. How can we find the total displacement
+while that velocity is changing? A familiar arithmetic trick gives us the route.
+:::
+
+## 3 · Derive the equations using vectors {#vector-derivation}
+
+### Start with 1 + 2 + … + 100
+
+Pair the first and last numbers:
+
+$$
+1+100=101,\qquad 2+99=101,\qquad 3+98=101.
+$$
+
+There are 50 such pairs. Therefore
+
+$$
+1+2+\cdots+100=50\times101=5050.
+$$
+
+The useful feature is that the numbers increase by the same amount at every
+step. Pairing opposite ends produces the same sum.
+
+Under constant acceleration, velocities sampled at **equal time intervals**
+have the same structure. Each step adds the same vector.
+
+### Divide the elapsed time into equal intervals
+
+Choose $N$ intervals, each of duration $\delta t$, so that $t=N\delta t$.
+Label the velocities at their boundaries
+
+$$
+\vec v_0,\ \vec v_1,\ \ldots,\ \vec v_N.
+$$
+
+There are **$N$ intervals but $N+1$ boundary velocities**. From the velocity equation,
+
+$$
+\vec v_j=\vec v_0+j\vec a\,\delta t.
+$$
+
+In particular, velocities equally far from opposite ends satisfy
+
+$$
+\vec v_j+\vec v_{N-j}
+=2\vec v_0+N\vec a\,\delta t
+=\vec v_0+\vec v_N.
+$$
+
+This is the vector version of $1+100=2+99$. Addition and multiplication
+by numbers work just as they did in the previous lecture.
+
+### Which velocity belongs to an interval?
+
+Velocity is changing even inside one interval. We therefore use the
+**average velocity during that interval**, rather than pretending that
+its initial velocity stays unchanged.
+
+Under constant acceleration, velocity changes linearly with time.
+Take two moments equally far before and after the midpoint of an interval:
+their velocities add to twice the midpoint velocity. All such pairs have the
+same mean. The time average is consequently the midpoint velocity, also the
+mean of the endpoint velocities.
+
+For interval $j$, write this average as
+
+$$
+\vec u_j=\frac{\vec v_j+\vec v_{j+1}}{2},
+\qquad j=0,\ldots,N-1.
+$$
+
+Its displacement is exactly
+
+$$
+\Delta\vec r_j=\vec u_j\,\delta t.
+$$
+
+::: {.idea}
+**An instant has no duration.**
+To find an interval's displacement, multiply its **average velocity** by its
+duration. Multiplying one endpoint's instantaneous velocity by a finite
+duration is generally only an approximation when velocity changes.
+
+For constant acceleration, averaging the two endpoint velocities is exact.
+It is not a rule for arbitrary changing acceleration.
+:::
+
+### Pair the interval averages
+
+The $N$ interval averages also form an arithmetic sequence. From opposite ends,
+
+$$
+\vec u_j+\vec u_{N-1-j}=\vec v_0+\vec v_N.
+$$
+
+Let their sum be $\vec S$. Write that sum once forwards and once backwards:
+
+$$
+\begin{aligned}
+\vec S&=\vec u_0+\vec u_1+\cdots+\vec u_{N-1},\\
+\vec S&=\vec u_{N-1}+\vec u_{N-2}+\cdots+\vec u_0.
+\end{aligned}
+$$
+
+Adding corresponding terms gives
+
+$$
+2\vec S=N(\vec v_0+\vec v_N).
+$$
+
+This works whether $N$ is odd or even. Now add the displacements:
+
+$$
+\begin{aligned}
+\Delta\vec r
+&=\sum_{j=0}^{N-1}\Delta\vec r_j
+=\vec S\,\delta t\\
+&=\frac{\vec v_0+\vec v_N}{2}\,N\delta t
+=\frac{\vec v_0+\vec v(t)}{2}\,t.
+\end{aligned}
+$$
+
+We have found the displacement without choosing any coordinate directions.
+
+### Substitute the velocity equation
+
+Use $\vec v(t)=\vec v_0+\vec a\,t$:
+
+$$
+\begin{aligned}
+\Delta\vec r
+&=\frac{\vec v_0+(\vec v_0+\vec a\,t)}{2}\,t\\
+&=\vec v_0t+\frac12\vec a\,t^2.
+\end{aligned}
+$$
+
+Displacement is $\vec r(t)-\vec r_0$. Add the initial position:
+
+$$
+\boxed{\vec r(t)=\vec r_0+\vec v_0t+\frac12\vec a\,t^2.}
+$$
+
+::: {.idea}
+**The first goal is complete: two vector equations.**
+
+$$
+\vec v(t)=\vec v_0+\vec a\,t,
+\qquad
+\vec r(t)=\vec r_0+\vec v_0t+\tfrac12\vec a\,t^2.
+$$
+
+Here $t$ is time since the start, $\vec r_0$ and $\vec v_0$ are the initial
+position and velocity, and $\vec a$ is constant.
+The same vector equations work in one, two, or three dimensions.
+:::
+
+<details>
+<summary>Check the result · what if acceleration is zero?</summary>
+
+::: {.answer}
+Set $\vec a=\vec 0$. The equations reduce to
+$\vec v(t)=\vec v_0$ and $\vec r(t)=\vec r_0+\vec v_0t$:
+constant velocity, as expected.
+
+The units also agree: $\vec v_0t$ has units of length, and
+$\vec a t^2$ has units $(\mathrm{m/s^2})(\mathrm{s^2})=\mathrm m$.
+Both terms can be added to a position.
+:::
+
+</details>
+
+::: {.bridge}
+The vector derivation keeps directions inside the arrows. To calculate
+using ordinary numbers, we must make those directions explicit and fix them.
+:::
+
+## 4 · Derive the equations using components {#components}
+
+### Fix the directions
+
+Return to our schematic city drawing. Choose a direction from Astana towards
+Almaty for $x$, and a perpendicular direction labelled towards Karaganda
+for $y$. Keep these axes fixed.
+
+A vector in this plane can be written as the sum of one vector along
+$x$ and another along $y$.
+
+The dimensional qualification matters. Although any vector can be split
+into two vectors in many ways, **two fixed independent directions span only
+a plane**. To represent arbitrary vectors in three-dimensional space, we
+need three independent directions. Our examples remain in a plane.
+
+We use perpendicular axes so lengths follow Pythagoras. The real geographical
+bearings of these cities are not being asserted to be perpendicular.
+
+### Unit vectors carry direction
+
+A **unit vector** has magnitude 1. Let $\hat{\imath}$ point in the positive
+$x$ direction and $\hat{\jmath}$ in the positive $y$ direction.
+
+For example, if positions are measured in metres,
+
+$$
+\vec r=(2,3)\,\mathrm m
+=(2\hat{\imath}+3\hat{\jmath})\,\mathrm m.
+$$
+
+The pair records the components in the chosen basis. The sum shows the
+two directed parts explicitly.
+
+A third description uses the vector's own direction:
+
+$$
+\vec r=|\vec r|\,\hat e_r.
+$$
+
+For this example,
+
+$$
+|\vec r|=\sqrt{2^2+3^2}\,\mathrm m=\sqrt{13}\,\mathrm m,
+$$
+
+and
+
+$$
+\hat e_r=\frac{\vec r}{|\vec r|}
+=\frac2{\sqrt{13}}\hat{\imath}+\frac3{\sqrt{13}}\hat{\jmath}.
+$$
+
+Check its length:
+$\sqrt{(2/\sqrt{13})^2+(3/\sqrt{13})^2}=1$.
+Dividing by the magnitude removes the length and leaves the direction.
+
+The basis vectors $\hat{\imath},\hat{\jmath}$ stay fixed.
+The vector $\hat e_r$ points along this particular $\vec r$, so it may
+change as the point moves. The zero vector has no defined unit direction
+because its magnitude is zero.
+
+### The price of using numbers
+
+Write
+
+$$
+\begin{aligned}
+\vec r&=x\hat{\imath}+y\hat{\jmath},\\
+\vec v&=v_x\hat{\imath}+v_y\hat{\jmath},\\
+\vec a&=a_x\hat{\imath}+a_y\hat{\jmath}.
+\end{aligned}
+$$
+
+Because the basis directions are fixed and independent, equal vectors have
+equal components along each direction.
+
+Our two vector equations become **four scalar equations in a plane**:
+
+::: {.quarto-table}
+
+| Motion quantity | Along $x$ | Along $y$ |
+|---|---|---|
+| Velocity | $v_x=v_{0x}+a_xt$ | $v_y=v_{0y}+a_yt$ |
+| Position | $x=x_0+v_{0x}t+\tfrac12a_xt^2$ | $y=y_0+v_{0y}t+\tfrac12a_yt^2$ |
+
+:::
+
+In general 3D motion there would be six: an extra velocity equation and an
+extra position equation along $z$.
+
+These components are **signed numbers**. A negative value tells us that a
+vector component points opposite the chosen positive direction.
+The physical quantities still have units.
+
+### Derive the x equation directly with scalars
+
+We can obtain the component equations from scratch, using the same logic
+with ordinary numbers. Constant $a_x$ gives
+
+$$
+v_x=v_{0x}+a_xt.
+$$
+
+The equally spaced values of $v_x$ pair just like the vectors did.
+Thus the average over the whole time is
+
+$$
+\bar v_x=\frac{v_{0x}+v_x}{2}.
+$$
+
+Multiply by elapsed time:
+
+$$
+\begin{aligned}
+\Delta x
+&=\bar v_x t
+=\frac{v_{0x}+v_x}{2}\,t\\
+&=\frac{v_{0x}+v_{0x}+a_xt}{2}\,t\\
+&=v_{0x}t+\frac12a_xt^2.
+\end{aligned}
+$$
+
+Adding $x_0$ gives the position equation. Repeating the same argument for
+$y$ gives the other pair. This completes our second goal.
+
+The handwritten $v_x$–$t$ graph draws the same reasoning: a straight line
+has average height $(v_{0x}+v_x)/2$, so its trapezoid gives the displacement.
+Treat areas **below** the time axis as negative. If velocity changes sign,
+signed areas still give displacement; total distance instead adds the
+absolute contributions.
+
+::: {.bridge}
+We have one set of laws written two ways. Applying them means choosing
+useful axes, stating the acceleration, and translating the question into a
+condition on position or velocity.
+:::
+
+## 5 · Apply the equations: projectile motion {#projectile}
+
+Launch an object with speed $v_0$ at an angle $\alpha$ above the horizontal.
+Take the launch point as $(0,0)$, with $x$ horizontal and $y$ upwards.
+
+Assume air resistance is negligible and gravitational acceleration is constant.
+For an upward launch, $0<\alpha\leq90^\circ$.
+
+The initial components and acceleration are
+
+$$
+v_{0x}=v_0\cos\alpha,\qquad v_{0y}=v_0\sin\alpha,
+\qquad a_x=0,\qquad a_y=-g.
+$$
+
+<figure class="diagram">
+<img src="boards/002.jpg" alt="Handwritten projectile trajectory and derivation of time to the highest point and maximum height." loading="lazy">
+<figcaption>The original projectile board: use the vertical velocity to find the time, then use that time in the position equation.</figcaption>
+</figure>
+
+### Write the motion in each direction
+
+$$
+\begin{aligned}
+x(t)&=v_0\cos\alpha\,t,&
+v_x(t)&=v_0\cos\alpha,\\
+y(t)&=v_0\sin\alpha\,t-\frac12gt^2,&
+v_y(t)&=v_0\sin\alpha-gt.
+\end{aligned}
+$$
+
+Gravity changes the vertical component. With no horizontal acceleration,
+the horizontal velocity stays constant.
+
+### What condition identifies the highest point?
+
+At the highest point, the vertical velocity is zero:
+
+$$
+0=v_0\sin\alpha-gt_{\text{top}},
+\qquad
+t_{\text{top}}=\frac{v_0\sin\alpha}{g}.
+$$
+
+This does **not** mean the acceleration is zero. It remains downward.
+For a nonvertical launch, the horizontal velocity is still nonzero too.
+
+### Substitute that time into the height equation
+
+$$
+\begin{aligned}
+h
+&=v_0\sin\alpha\left(\frac{v_0\sin\alpha}{g}\right)
+-\frac12g\left(\frac{v_0\sin\alpha}{g}\right)^2\\
+&=\boxed{\frac{v_0^2\sin^2\alpha}{2g}}.
+\end{aligned}
+$$
+
+This is the maximum height **above the launch point**. If the launch has a
+coordinate $y_0\neq0$, the top has coordinate $y_0+h$.
+
+### Try it: a 20 m/s launch
+
+An object is launched at $20\ \mathrm{m/s}$, $30^\circ$ above the horizontal.
+Using $g=9.8\ \mathrm{m/s^2}$, find the time to the top, the height gained,
+and its velocity at the top.
+
+<details>
+<summary>Show the solution · the projectile</summary>
+
+::: {.answer}
+The initial vertical component is $20\sin30^\circ=10\ \mathrm{m/s}$.
+Therefore
+
+$$
+t_{\text{top}}=\frac{10}{9.8}\approx1.02\ \mathrm s,\qquad
+h=\frac{10^2}{2(9.8)}\approx5.10\ \mathrm m.
+$$
+
+At the top, $v_y=0$, but $v_x=20\cos30^\circ\approx17.3\ \mathrm{m/s}$.
+The velocity is horizontal, while the acceleration is still
+$-9.8\hat{\jmath}\ \mathrm{m/s^2}$.
+:::
+
+</details>
+
+## 6 · Apply the equations: the inclined plane {#incline}
+
+A block starts from rest and slides a distance $L$ down a straight incline
+at angle $\alpha$ to the horizontal. How long does it take?
+
+Assume the plane is fixed and frictionless, gravity is uniform, and the block
+slides without rolling. Take $0<\alpha<90^\circ$.
+
+### Choose axes to fit the motion
+
+Put the origin at the starting point. Let positive $x$ point **down the
+slope**, and positive $y$ point perpendicular to the surface, away from it.
+
+The force model supplies the acceleration: the component of gravity along
+the plane is $g\sin\alpha$. The plane's normal force balances the perpendicular
+component, keeping the block on the surface. Therefore
+
+$$
+a_x=g\sin\alpha,\qquad a_y=0.
+$$
+
+This is where information about forces enters. Kinematics tells us what
+happens **given** an acceleration; it does not alone establish that acceleration.
+
+<figure class="diagram">
+<img src="boards/003.jpg" alt="Handwritten inclined plane, axes along and perpendicular to the slope, and derivation of travel time." loading="lazy">
+<figcaption>Choose the direction of motion as one coordinate direction. The vector laws stay the same.</figcaption>
+</figure>
+
+### Use the starting conditions
+
+The block starts at $x_0=0$ with $v_{0x}=0$, so
+
+$$
+x(t)=\frac12g\sin\alpha\,t^2.
+$$
+
+At the bottom, $x=L$. Solve for the positive elapsed time:
+
+$$
+L=\frac12g\sin\alpha\,t^2,
+\qquad
+\boxed{t=\sqrt{\frac{2L}{g\sin\alpha}}}.
+$$
+
+A longer slope takes more time. At fixed $L$, a steeper slope gives a
+larger acceleration and a shorter time. At exactly $\alpha=0$, a block
+released from rest does not start sliding in this ideal model; there is
+no finite arrival time.
+
+### Try it: a 5 m slope
+
+Let $L=5.0\ \mathrm m$ and $\alpha=30^\circ$.
+Find the time to the bottom and the speed there, using $g=9.8\ \mathrm{m/s^2}$.
+
+<details>
+<summary>Show the solution · the incline</summary>
+
+::: {.answer}
+The downhill acceleration is $9.8\sin30^\circ=4.9\ \mathrm{m/s^2}$.
+Then
+
+$$
+t=\sqrt{\frac{2(5.0)}{4.9}}\approx1.43\ \mathrm s.
+$$
+
+Use the velocity equation:
+
+$$
+v_x=a_xt\approx4.9(1.43)\approx7.0\ \mathrm{m/s}.
+$$
+
+The velocity points down the slope. If friction were present, we would
+first need the resulting acceleration; $g\sin\alpha$ would no longer be
+the complete expression.
+:::
+
+</details>
+
+## 7 · Return to the two goals {#recap}
+
+We began with a position. Comparing positions gave displacement; including
+time gave velocity; comparing velocities gave acceleration.
+
+For constant acceleration, equal time intervals gave an arithmetic sequence
+of velocities. Pairing its terms led to
+
+$$
+\vec v(t)=\vec v_0+\vec a\,t,
+\qquad
+\vec r(t)=\vec r_0+\vec v_0t+\frac12\vec a\,t^2.
+$$
+
+Fixing coordinate directions let us express these as scalar equations.
+The projectile and incline then became two choices of acceleration and axes
+within the same framework.
+
+::: {.idea}
+**Check your reasoning**
+
+- Why does “1,000 km away” fail to locate one point?
+- What changes if we move the fixed origin? What stays the same?
+- Why must an interval's displacement use its average velocity?
+- How does pairing work for vectors as well as for numbers?
+- Why are there four scalar equations in a plane, but six in 3D?
+- At a projectile's highest point, which velocity component vanishes?
+- Which physical assumptions give $a_x=g\sin\alpha$ on the incline?
+:::
+
+::: {.lecture-links}
+[Return to the handwritten slides](slides.html){.button .primary}
+[Review vectors](../vectors/index.html){.button .secondary}
+:::

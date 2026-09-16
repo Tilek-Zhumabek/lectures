@@ -709,7 +709,8 @@ arrow rules and ordinary arithmetic.
 
 
 [Return to the lecture slides →](slides.html)
-:::
+
+[Next lecture: Motion — from a position to the equations of motion →](../motion/index.html)
 
 ::: {.further-reading}
 The hunters' story is adapted from Banesh Hoffmann's *About Vectors* (Dover, 1975).

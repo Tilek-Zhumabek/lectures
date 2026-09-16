@@ -1,0 +1,73 @@
+\usepackage[margin=18mm,headheight=24pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,angles,quotes}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{VectorGreen}{HTML}{174A38}
+\definecolor{VectorAccent}{HTML}{216343}
+\definecolor{VectorMint}{HTML}{E2F0E5}
+\definecolor{VectorCoral}{HTML}{C45136}
+\definecolor{VectorInk}{HTML}{203B31}
+\definecolor{VectorMuted}{HTML}{5F7468}
+
+\color{VectorInk}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlist[enumerate]{leftmargin=*,itemsep=0.45em,topsep=0.35em}
+\sisetup{per-mode=symbol}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textcolor{VectorMuted}{Vectors · Exercise session}}
+\rhead{\textcolor{VectorMuted}{Addition and subtraction}}
+\cfoot{\textcolor{VectorMuted}{\thepage\ / \pageref*{LastPage}}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{VectorMint}\leaders\hrule height \headrulewidth\hfill}}
+
+\newcommand{\sessiontitle}[2]{%
+  {\color{VectorGreen}\fontsize{25}{29}\selectfont\bfseries #1\par}
+  \vspace{0.2em}
+  {\color{VectorMuted}\large #2\par}
+  \vspace{0.55em}
+  {\color{VectorAccent}\rule{\textwidth}{1.5pt}}
+}
+
+\newcommand{\problemheading}[2]{%
+  {\color{VectorAccent}\small\bfseries\MakeUppercase{Problem #1}}\par
+  {\color{VectorGreen}\LARGE\bfseries #2}\par
+  \vspace{0.25em}
+}
+
+\newcommand{\prediction}[1]{%
+  \begin{center}
+  \colorbox{VectorMint}{\parbox{0.92\linewidth}{\textbf{Predict before calculating.} #1}}
+  \end{center}
+}
+
+\newcommand{\checkpoint}[1]{%
+  \begin{center}
+  \fcolorbox{VectorAccent}{white}{\parbox{0.91\linewidth}{\textbf{Reasoning checkpoint.} #1}}
+  \end{center}
+}
+
+\newcommand{\worklines}[1]{%
+  \par\vspace{0.25em}
+  {\color{VectorMuted}\small\textit{Working and explanation}}\par
+  \foreach \n in {1,...,#1}{\vspace{0.54cm}\noindent\textcolor{VectorMint}{\rule{\linewidth}{0.35pt}}\par}
+}
+
+\newcommand{\answerbox}[1]{%
+  \begin{center}
+  \colorbox{VectorMint}{\parbox{0.92\linewidth}{\textbf{Answer.} #1}}
+  \end{center}
+}
