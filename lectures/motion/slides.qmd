@@ -1,0 +1,375 @@
+---
+title: ""
+pagetitle: "Motion — lecture slides"
+author: "Tilek Zhumabek"
+format:
+  revealjs:
+    slide-level: 2
+    slide-number: c/t
+    navigation-mode: linear
+    progress: true
+    controls: true
+    transition: none
+    auto-stretch: false
+    theme: default
+    css: slides.css
+    html-math-method: mathml
+    width: 1280
+    height: 720
+    margin: 0.06
+    center: false
+    hash: true
+    pdf-separate-fragments: false
+    footer: '<a href="index.html">MOTION · Full lecture notes ↗</a>'
+---
+
+## Motion {#motion .opening}
+
+<p class="chapter">Lecture 02 · Tilek Zhumabek</p>
+<p class="lead">Before we can describe motion,<br>we need to say where something is.</p>
+<p class="route">Position → change → time → equations of motion</p>
+<p class="chalk-note">Two routes to the same result: vectors first, then components.</p>
+
+::: {.notes}
+Follow the story of the lecture, not the whiteboard export numbers. The city names are labels on an ideal flat diagram, not a geographical map. Begin with an empty space and a point. Do not introduce axes yet.
+:::
+
+## Start with one point {#origin}
+
+<p class="chapter">01 · Position</p>
+
+<svg class="sketch" viewBox="0 0 1100 300" role="img" aria-label="A single point in otherwise empty space, labelled Astana, our chosen origin."><circle cx="440" cy="115" r="7" fill="#f1f3ea"/><text x="475" y="125" fill="#f1f3ea" font-size="42">Astana</text><path d="M405 210 Q415 172 435 135" stroke="#b3dfbc" stroke-width="3" fill="none"/><text x="220" y="252" fill="#b3dfbc" font-size="30">our chosen origin</text></svg>
+
+<p>We can give this point any name.<br>Let us call it <em>Astana</em> and use it as our reference.</p>
+<p class="chalk-note">A reference point is a beginning. Directions and units still need to be chosen.</p>
+
+::: {.notes}
+Ask students what they could call the point: a word, a number, any label. Distinguish naming a point from measuring position. Choosing an origin does not force the location of a second point. It gives us a reference relative to which we can specify that location.
+:::
+
+## “1,000 km away” is not enough {#distance}
+
+<p class="chapter">01 · Position</p>
+
+<svg class="sketch" viewBox="0 0 1100 330" role="img" aria-label="A circle of candidate points at a distance of 1,000 kilometres from Astana in a plane."><circle cx="410" cy="160" r="140" fill="none" stroke="#c1d1c5" stroke-width="2" stroke-dasharray="7 9"/><circle cx="410" cy="160" r="6" fill="#f1f3ea"/><path d="M410 160 L550 160" stroke="#b3dfbc" stroke-width="3"/><g fill="#f1f3ea"><circle cx="550" cy="160" r="6"/><circle cx="410" cy="20" r="6"/><circle cx="270" cy="160" r="6"/><circle cx="410" cy="300" r="6"/></g><g fill="#f1f3ea" font-size="27"><text x="365" y="199">Astana</text><text x="422" y="145">1,000 km</text><text x="630" y="140">Which point?</text><text x="630" y="183" fill="#b3dfbc">Infinitely many choices.</text></g></svg>
+
+<p>Distance fixes a circle in a plane.<br>We still need a direction.</p>
+<p class="chalk-note">In three-dimensional space, the same distance gives a sphere.</p>
+
+::: {.notes}
+Keep the idealisation explicit: 1,000 km is an illustrative instruction, not a measured distance between the actual cities. On our two-dimensional board the set is a circle. In three dimensions it is a sphere. Adding a complete direction singles out one point.
+:::
+
+## Add a direction: a position vector {#position-vector}
+
+<p class="chapter">01 · Position</p>
+
+<div class="board-grid equal">
+<div>
+
+<div class="board-window city-window" style="aspect-ratio:245/162;--image-width:783.6734693877551%;--image-left:-51.02040816326531%;--image-top:-15.432098765432098%"><img src="boards/001.jpg" alt="Original sketch: Astana is the origin; arrows lead towards Almaty and Karaganda."></div>
+
+</div>
+<div>
+<p>“1,000 km <em>in this direction</em>.”</p>
+<p>Now we have one endpoint.<br>Call it <em>Almaty</em>.</p>
+<p class="prompt">Origin → point = position vector</p>
+</div>
+</div>
+<p class="chalk-line">Locate Karaganda in the same way: another arrow from the same origin.</p>
+<p class="chalk-note">The city names label a schematic plane. We return to the drawn axes later.</p>
+
+::: {.notes}
+Use the direction towards Almaty to complete the instruction. Emphasise magnitude AND direction. The original sketch includes unit-vector symbols; leave those for the component part. A position vector depends on the chosen origin.
+:::
+
+## Displacement: what changed? {#displacement}
+
+<p class="chapter">02 · From position to motion</p>
+
+<div class="board-grid equal">
+<div><img src="../../assets/motion-cover.svg" alt="Two position arrows from Astana, with the displacement arrow from Almaty to Karaganda." style="width:100%;margin:0"></div>
+<div>
+
+<div class="board-window" style="aspect-ratio:277/102;--image-width:693.1407942238267%;--image-left:-41.87725631768953%;--image-top:-177.45098039215685%"><img src="boards/001.jpg" alt="Handwritten displacement: delta r equals minus r one plus r two, or r two minus r one."></div>
+
+<p>Finish minus start.</p>
+<p>The new arrow runs from the old position to the new position.</p>
+</div>
+</div>
+<p class="chalk-line">To describe motion, ask how position changes <em>with time</em>.</p>
+
+::: {.notes}
+Compare two positions measured from the SAME fixed origin. The displacement runs from the initial point to the final point, not from Astana unless the motion starts there. A shifted fixed origin changes both position vectors equally, so their difference stays the same. Introduce average velocity as displacement divided by elapsed time; motion means a changing position relative to this reference frame.
+:::
+
+## Two familiar kinds of motion {#types}
+
+<img class="board-full compact" src="boards/004.jpg" alt="Original board: motion with constant velocity, fixed direction and magnitude; motion with constant acceleration, delta v over delta t equals a.">
+<p class="chalk-line">Constant velocity keeps the whole arrow fixed.<br>Constant acceleration changes the velocity arrow at a fixed rate.</p>
+
+::: {.notes}
+Recall the two cases known from school. Constant acceleration includes zero acceleration as a special case; the branches organise the discussion, not disjoint categories. Constant speed alone does not imply constant velocity, since direction can change.
+:::
+
+## Constant velocity: remember the direction {#constant-velocity}
+
+<div class="board-grid">
+<div>
+
+<div class="board-window" style="aspect-ratio:1020/555;--image-width:188.23529411764704%;--image-left:-6.078431372549019%;--image-top:-47.387387387387385%"><img src="boards/004.jpg" alt="Handwritten constant-velocity relationship: displacement over time equals velocity, leading to distance over time equals speed."></div>
+
+</div>
+<div>
+<p>The direction stays fixed.<br>The magnitude stays fixed.</p>
+<p>Choose a line along the motion.<br>Now one number is enough.</p>
+</div>
+</div>
+
+$$\Delta\vec r=\vec v\,\Delta t
+\qquad\Longrightarrow\qquad
+\Delta x=v_x\,\Delta t.$$
+
+<p class="chalk-note">Along the direction of travel, distance = speed × time. A signed coordinate still records which way is positive.</p>
+
+::: {.notes}
+We have not discarded direction: we stored it in the choice of axis. For nonzero constant velocity along the positive axis, speed equals the positive component. The familiar l/t rule concerns distance and speed. Average velocity equals instantaneous velocity in this constant case.
+:::
+
+## Constant acceleration: equal changes {#constant-acceleration}
+
+<div class="board-grid equal">
+<div>
+
+<div class="board-window" style="aspect-ratio:730/579;--image-width:263.01369863013696%;--image-left:-155.06849315068493%;--image-top:-75.64766839378238%"><img src="boards/004.jpg" alt="Handwritten acceleration definition and velocity equation: delta v equals a delta t, and v equals v zero plus a delta t."></div>
+
+</div>
+<div>
+<p>Equal time intervals give<br>equal <em>vector changes</em> in velocity.</p>
+<p class="prompt">But what is the total displacement?</p>
+<p class="chalk-note">Constant means both the magnitude and the direction of acceleration stay fixed.</p>
+</div>
+</div>
+
+::: {.notes}
+Take t = 0 at the start, so elapsed time is t. The first target is v(t) = v0 + a t. Do not claim that the direction of velocity must be fixed: projectile motion is the coming counterexample. The second target is the position equation, using vector arithmetic.
+:::
+
+## A familiar sum {#pairing}
+
+<p class="chapter">03 · Derive the equations with vectors</p>
+
+<div class="board-window sum-window" style="aspect-ratio:935/188;--image-width:205.34759358288773%;--image-left:-58.82352941176471%;--image-top:0%"><img src="boards/005.jpg" alt="Handwritten pairing of 1 plus 2 through 99 plus 100, giving 5,050: fifty pairs of 101."></div>
+
+<p class="prompt">How did you get 5,050?</p>
+<p>First + last. Second + second-last.<br>Every pair has the same sum.</p>
+<p class="chalk-line">Can we use the same idea for changing velocities?</p>
+
+::: {.notes}
+Let students supply 50 pairs of 101. The connection is an arithmetic sequence: equal time increments with constant vector acceleration give equal vector increments. We can pair vectors using the same addition laws.
+:::
+
+## Equal times, an arithmetic sequence {#velocity-sequence}
+
+<div class="board-grid equal">
+<div>
+
+<div class="board-window sequence-window" style="aspect-ratio:400/443;--image-width:480%;--image-left:-132.5%;--image-top:-43.340857787810386%"><img src="boards/005.jpg" alt="Original sequence of velocity updates: each next velocity is the previous velocity plus acceleration times the time increment."></div>
+
+</div>
+<div>
+
+$$t=N\delta t,$$
+$$\vec v_j=\vec v_0+j\vec a\,\delta t.$$
+
+<p>There are $N$ intervals<br>and $N+1$ boundary velocities.</p>
+<p>Each step adds the same vector.</p>
+</div>
+</div>
+<p class="chalk-line">Pair equal-time velocities from opposite ends: their sum is always $\vec v_0+\vec v_N$.</p>
+
+::: {.notes}
+Explicitly distinguish the boundary index j = 0,...,N from the N time intervals. This avoids the N-versus-N+1 ambiguity in the original board. Pairing works component-free because vector addition and multiplication by numbers obey the same distributive rules.
+:::
+
+## One interval needs its average velocity {#interval-average}
+
+<p class="chapter">03 · Make the sum exact</p>
+
+<div class="board-math">
+
+$$\vec u_j=\frac{\vec v_j+\vec v_{j+1}}{2},
+\qquad
+\Delta\vec r_j=\vec u_j\,\delta t.$$
+
+$$\vec u_0+\vec u_{N-1}=\vec v_0+\vec v_N.$$
+
+$$\Delta\vec r
+=\left(\vec u_0+\cdots+\vec u_{N-1}\right)\delta t
+=\frac{\vec v_0+\vec v_N}{2}\,N\delta t.$$
+
+</div>
+
+<p class="chalk-note">Under constant acceleration, velocities at equal times on either side of an interval’s midpoint pair to the same sum. Its average is the mean of its endpoint velocities.</p>
+
+::: {.notes}
+This is the precision needed in the spoken derivation. An instantaneous velocity times a finite interval is generally not that interval's exact displacement. Use its average velocity u_j. Since velocity changes linearly in time, symmetric moments have equal velocity sums; their time average is the midpoint velocity, the mean of the endpoints. There are exactly N averages. Pair from opposite ends, or write the sequence twice in reverse order; either works for odd and even N. No components or integration are needed.
+:::
+
+## The vector equations of motion {#vector-equations}
+
+<div class="board-grid equal">
+<div>
+
+<div class="board-window" style="aspect-ratio:720/468;--image-width:266.66666666666663%;--image-left:-162.5%;--image-top:-117.52136752136752%"><img src="boards/005.jpg" alt="Handwritten substitution of v final equals v initial plus a t into the average-velocity displacement, yielding r final equals r initial plus v initial t plus one half a t squared."></div>
+
+</div>
+<div>
+<p>Substitute the final velocity:</p>
+
+$$\vec v(t)=\vec v_0+\vec a\,t.$$
+
+<p>Then add the starting position:</p>
+
+$$\vec r(t)=\vec r_0+\vec v_0t+\frac12\vec a\,t^2.$$
+
+<p class="chalk-note">Two vector equations.<br>One assumption: constant acceleration.</p>
+</div>
+</div>
+
+::: {.notes}
+The original board labels initial and final position r1 and r2; the notes use r0 and r(t). These mean the same endpoints. We achieved the first goal entirely with vector arithmetic. Now ask how to calculate using only signed numbers.
+:::
+
+## Fix directions before using numbers {#choose-axes}
+
+<p class="chapter">04 · Derive the equations with components</p>
+
+<div class="board-grid equal">
+<div>
+
+<div class="board-window city-window" style="aspect-ratio:245/162;--image-width:783.6734693877551%;--image-left:-51.02040816326531%;--image-top:-15.432098765432098%"><img src="boards/001.jpg" alt="Original axes labelled Astana, Almaty and Karaganda, with i and j unit vectors."></div>
+
+</div>
+<div>
+<p>Choose two perpendicular directions in our plane.</p>
+<p>Fix $\hat{\imath}$ and $\hat{\jmath}$.<br>Then keep their directions fixed.</p>
+<p class="prompt">An arrow = an x-part + a y-part.</p>
+</div>
+</div>
+<p class="chalk-note">Two independent directions span a plane. General three-dimensional motion needs a third, $\hat{k}$.</p>
+
+::: {.notes}
+Clarify the spoken statement: a vector can be split into two vectors in many ways, but two FIXED directions cannot represent every vector in 3D. We work in a plane with perpendicular axes. Actual city bearings are not generally perpendicular: these names are schematic labels. Non-perpendicular basis vectors are possible, but the simple square-root magnitude formula would change.
+:::
+
+## Three ways to write the same vector {#unit-vectors}
+
+<div class="board-grid wide-left">
+<div>
+
+<div class="board-window" style="aspect-ratio:594/255;--image-width:323.2323232323232%;--image-left:-22.39057239057239%;--image-top:-115.29411764705881%"><img src="boards/001.jpg" alt="Handwritten r equals (2,3), equals 2 i plus 3 j, equals magnitude r times the unit vector e r; e r equals r divided by its magnitude."></div>
+
+</div>
+<div>
+<p>Components: $(2,3)$</p>
+<p>Fixed directions:<br>$2\hat{\imath}+3\hat{\jmath}$</p>
+<p>Length × its own direction:<br>$|\vec r|\hat e_r$</p>
+</div>
+</div>
+
+$$|\vec r|=\sqrt{13},
+\qquad
+\hat e_r=\frac{\vec r}{|\vec r|}
+=\frac{2}{\sqrt{13}}\hat{\imath}
++\frac{3}{\sqrt{13}}\hat{\jmath}.$$
+
+<p class="chalk-note">A unit vector has length 1. The zero vector has no defined direction to normalise.</p>
+
+::: {.notes}
+Treat 2 and 3 as component numbers in the same chosen length unit. Distinguish the fixed basis vectors i and j from e_r, which points along this particular position vector and can change as the object moves.
+:::
+
+## Two vector equations become four scalar equations {#components}
+
+<div class="board-grid equal">
+<div>
+
+<div class="board-window" style="aspect-ratio:430/395;--image-width:446.51162790697674%;--image-left:-183.72093023255815%;--image-top:-56.9620253164557%"><img src="boards/001.jpg" alt="Original component split: changes in x and y, velocity components, and v x equals v zero x plus a x t."></div>
+
+</div>
+<div>
+
+$$v_x=v_{0x}+a_xt,$$
+$$v_y=v_{0y}+a_yt,$$
+
+$$x=x_0+v_{0x}t+\tfrac12a_xt^2,$$
+$$y=y_0+v_{0y}t+\tfrac12a_yt^2.$$
+
+</div>
+</div>
+<p class="chalk-note">For displacement over an interval, the velocity in $\Delta x=\bar v_x\Delta t$ is an average. The same applies to y.</p>
+
+::: {.notes}
+The original board's displacement component uses a v symbol without an explicit average bar; state this qualification. Equal vectors have equal coefficients along each fixed independent basis direction. Two vector equations correspond to four scalar equations in 2D, or six in 3D. Components can be negative; these are signed numbers, not just magnitudes.
+:::
+
+## Derive it again, one direction at a time {#scalar-derivation}
+
+<div class="board-grid equal">
+<div>
+
+<div class="board-window" style="aspect-ratio:405/302;--image-width:474.074074074074%;--image-left:-333.33333333333337%;--image-top:-26.490066225165563%"><img src="boards/001.jpg" alt="Handwritten velocity versus time graph, a straight line from initial to final x velocity."></div>
+
+<p class="chalk-note">A straight line: its signed area is a trapezoid.</p>
+</div>
+<div>
+
+<div class="board-window" style="aspect-ratio:650/390;--image-width:295.3846153846154%;--image-left:-190%;--image-top:-101.28205128205127%"><img src="boards/001.jpg" alt="Handwritten trapezoid area: displacement equals average x velocity times time, yielding x final equals x initial plus v zero x t plus a x t squared over two."></div>
+
+</div>
+</div>
+<p class="chalk-line">Use $\bar v_x=(v_{0x}+v_x)/2$, then $v_x=v_{0x}+a_xt$. Repeat for y.</p>
+
+::: {.notes}
+This is the second derivation, now using only scalar values. Explain the graph as a picture of adding equal-time contributions, not a new law. Area below the axis contributes negatively. If the line crosses zero, combine signed areas. The drawn example stays above zero. Match the resulting scalar equations to the components of our vector result.
+:::
+
+## Apply it: projectile motion {#projectile .application}
+
+<img class="board-full" src="boards/002.jpg" alt="Original projectile board: parabolic path, vertical velocity zero at the top, time to the top v zero sine alpha divided by g, and maximum height v zero squared sine squared alpha divided by 2g.">
+<p class="chalk-note">Neglect air resistance; g is constant. Set the launch point at y = 0.<br>At the top, $v_y=0$; the horizontal velocity generally remains nonzero.</p>
+
+::: {.notes}
+Choose x horizontal and y upwards. Initial velocity components are v0 cos alpha and v0 sin alpha; ax = 0, ay = -g. Start from the component equations already derived. Set vy = 0 to find time to the top, then substitute that time into y(t). The result is height above launch, h = v0² sin² alpha / (2g), for an upward launch. No new kinematic formula is required.
+:::
+
+## Apply it: an inclined plane {#incline .application}
+
+<img class="board-full" src="boards/003.jpg" alt="Original inclined-plane board: choose the x axis down the slope; acceleration g sine alpha; a block starts from rest and travels length L in time square root of 2L divided by g sine alpha.">
+<p class="chalk-note">A block slides from rest on a straight, frictionless, fixed incline; $0<\alpha<90^\circ$.<br>The normal force cancels the perpendicular component of gravity: $a_x=g\sin\alpha$.</p>
+
+::: {.notes}
+Rotate the coordinate directions to fit the problem. Take x downhill and y perpendicular to the plane. The acceleration formula requires the force model: gravity plus a normal reaction, with no friction or other applied forces. Gravity alone would accelerate the block through the surface; the normal reaction enforces the constraint. For length L and initial speed zero, L = (1/2) g sin alpha t², so choose the positive square root. Rotation of axes does not change the vector laws.
+:::
+
+## One story, two descriptions {#recap}
+
+<div class="recap">
+<p><span class="prompt">Position</span><br>Choose a reference.<br>Give a distance and a direction.</p>
+<p><span class="prompt">Motion</span><br>Compare positions.<br>Keep track of elapsed time.</p>
+<p><span class="prompt">Vectors</span><br>Pair equal-time velocities.<br>Derive two equations.</p>
+<p><span class="prompt">Components</span><br>Fix axes; use signed numbers.<br>Apply the same equations.</p>
+</div>
+
+$$\vec v=\vec v_0+\vec a\,t,
+\qquad
+\vec r=\vec r_0+\vec v_0t+\tfrac12\vec a\,t^2.$$
+
+<p class="chalk-note">These forms require constant acceleration. Changing the axes changes the components, not the motion.</p>
+
+[Read the explanations and worked examples →](index.html)
+
+::: {.notes}
+Check the two goals: can students reconstruct the pairing argument without components, and then derive the same result along one fixed axis? Ask why zero vertical velocity at the projectile's peak does not mean zero acceleration. Ask which incline assumption would fail if friction were added.
+:::
