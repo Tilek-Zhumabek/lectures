@@ -1,0 +1,36 @@
+@import url("../motion/slides.css");
+.reveal { font-family:"Avenir Next",Avenir,"Segoe UI",sans-serif; font-size:29px; }
+.reveal h2 { font-family:"Iowan Old Style",Georgia,serif; font-size:1.65em; }
+.reveal .opening h2 { font-size:90px; }
+.reveal .lead { font-size:39px; line-height:1.4; }
+.reveal .spike { font-size:43px; color:var(--mint); line-height:1.35; margin:28px 0; }
+.reveal .equation-peak { border-left:5px solid var(--mint); padding:16px 28px; margin:25px 0; background:#34483d; font-size:38px; }
+.reveal .operation-row { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin:35px 0; }
+.reveal .operation-row>div { border-top:2px solid #829c88; padding-top:20px; }
+.reveal .operation-row .active { color:var(--mint); border-top:5px solid var(--mint); }
+.reveal .operation-row strong { display:block; font-size:37px; margin-bottom:18px; }
+.reveal .operation-row p { font-size:24px; }
+.reveal .operation-row small { display:block; font-size:17px; color:var(--soft); }
+.reveal .board-grid { gap:30px; }
+.reveal .board-grid p { font-size:27px; }
+.reveal .board-grid .prompt { font-size:33px; }
+.reveal .board-grid .math.display { font-size:27px; }
+.reveal .board-window { border-radius:8px; }
+.reveal #train .board-window { max-width:420px; margin-inline:auto; }
+.reveal #squared-length .board-window { max-width:1000px; margin:0 auto 20px; }
+.reveal #second-law .board-window { max-width:820px; margin:0 auto 20px; }
+.reveal #circle .board-window { max-width:500px; margin-inline:auto; }
+.reveal .compact-math { font-size:29px; }
+.reveal .chalk-note { font-size:19px; }
+.reveal .question { font-size:38px; line-height:1.4; max-width:940px; }
+.reveal .three-signs { display:grid; grid-template-columns:repeat(3,1fr); gap:25px; margin:35px 0; }
+.reveal .three-signs>div { border-top:1px solid #829c88; padding-top:20px; }
+.reveal .three-signs strong { display:block; color:var(--mint); font-size:38px; margin-bottom:12px; }
+.reveal .three-signs p { font-size:26px; }
+.reveal .cover-art { width:100%; border-radius:12px; background:#e2f0e5; }
+.reveal .takeaway { font-size:34px; line-height:1.4; margin-top:26px; }
+.reveal .source-link { font-size:16px; color:var(--soft); }
+.reveal .math.display { margin:16px 0; }
+.reveal .board-full { height:430px; }
+.reveal .footer { font-size:12px; }
+@media print { .reveal .equation-peak { print-color-adjust:exact; -webkit-print-color-adjust:exact; } }

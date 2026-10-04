@@ -1,0 +1,165 @@
+\documentclass[11pt,a4paper]{article}
+\input{exercise-style.tex}
+\rhead{\textcolor{VectorMuted}{Worked solutions}}
+
+\begin{document}
+\sessiontitle{Solutions: Let the dot product see}{Instructor copy · Exercise session 3}
+
+\problemheading{1}{A familiar flight, a different route}
+
+Write $c=\vec u\cdot\vec g=-ug\sin\alpha$. Uniform acceleration gives
+$\vec r=\vec u t+\tfrac12\vec g t^2$. Take its dot product with itself:
+\[
+S(t)=\vec r\cdot\vec r=u^2t^2+ct^3+\tfrac14g^2t^4,
+\qquad S'(t)=2u^2t+3ct^2+g^2t^3.
+\]
+Height is the projection opposite to gravity: $\vec g\cdot\vec r=-gh$.
+The combination $2S-tS'$ eliminates the $u^2t^2$ term and gives
+\[
+2S-tS'=-ct^3-\tfrac12g^2t^4
+=-t^2\vec g\cdot\vec r=gt^2h.
+\]
+Thus height can be recovered from squared position and its first derivative:
+\[
+\boxed{h(t)=\frac{2S-tS'}{gt^2}
+=-\frac cg t-\frac12gt^2}\qquad(t>0).
+\]
+No horizontal or vertical component equations have been used.
+
+\textbf{a) Maximum height.} Complete the square in the recovered height:
+\[
+h(t)=\frac{c^2}{2g^3}-\frac g2\left(t+\frac{c}{g^2}\right)^2.
+\]
+Therefore
+\[
+\boxed{H=\frac{c^2}{2g^3}=\frac{u^2\sin^2\alpha}{2g},
+\qquad t_{\mathrm{top}}=-\frac{c}{g^2}=\frac{u\sin\alpha}{g}.}
+\]
+
+\textbf{b) Total flight time.} Set the recovered height to zero and take
+the nonzero root:
+\[
+\boxed{T=-\frac{2c}{g^2}=\frac{2u\sin\alpha}{g}=2t_{\mathrm{top}}.}
+\]
+
+\textbf{Optional reflection.} Substitute $t_{\mathrm{top}}=-c/g^2$ into
+$S'$ to obtain
+\[
+S'(t_{\mathrm{top}})=2t_{\mathrm{top}}u^2\cos^2\alpha>0.
+\]
+The projectile is still moving horizontally away from the launch point.
+Maximum height is not maximum distance from the origin. A strictly vertical
+throw, excluded in the question, would give $S'=0$ at the top.
+
+\checkpoint{A squared position contains information about height, but its stationary points answer a different geometric question.}
+
+\clearpage
+\problemheading{2}{Three speeds, an unseen force}
+
+\textbf{a) Recover scalar information without choosing axes.}
+Let $A=\vec a\cdot\vec a$ and $B=\vec v_0\cdot\vec a$.
+Taking the dot product of $\vec v=\vec v_0+\vec a t$ with itself gives
+\[
+v^2=v_0^2+2Bt+At^2.
+\]
+The three readings give, with SI units understood,
+\[
+v_0^2=25,\qquad 9=25+2B+A,\qquad 25=25+4B+4A.
+\]
+Thus $A=16$ and $B=-16$, so
+\[
+\boxed{a=\SI{4}{m/s^2},\qquad |\vec F|=ma=\SI{8}{N}.}
+\]
+If $\phi$ is the angle between the initial velocity and the force,
+\[
+\boxed{\cos\phi=\frac{\vec v_0\cdot\vec a}{v_0a}
+=-\frac45,\qquad \phi\approx126.9^\circ.}
+\]
+The absolute direction is undetermined: rotating the entire motion across
+the table leaves every speed reading unchanged.
+
+\textbf{b) Complete the square.} With $t$ in seconds,
+\[
+v^2=25-32t+16t^2=9+16(t-1)^2.
+\]
+Therefore
+\[
+\boxed{t_{\min}=\SI{1}{s},\qquad v_{\min}=\SI{3}{m/s}.}
+\]
+The puck never stops. At the minimum, $\vec v\cdot\vec a=B+At=0$:
+velocity and acceleration are perpendicular, and neither is zero.
+
+\textbf{c) Recover a distance without a trajectory.} Write
+$\tau=\SI{1}{s}$. Constant acceleration gives
+\[
+\Delta\vec r=2\tau\vec v_0+\tfrac12\vec a(2\tau)^2
+=2\tau(\vec v_0+\vec a\tau)=2\tau\vec v(\tau).
+\]
+Taking its squared length gives
+\[
+\boxed{|\Delta\vec r|=2\tau|\vec v(\tau)|=\SI{6}{m}.}
+\]
+Since $\vec v(\tau)\cdot\vec a=0$, also
+$\Delta\vec r\cdot\vec F=0$: the displacement is perpendicular to the
+constant force. This is the separation of the endpoints, not the length
+of the curved path.
+
+\checkpoint{The readings hide the vector directions, but their squared lengths retain enough information to recover a force magnitude and an angle.}
+
+\clearpage
+\problemheading{3}{What force turned it back?}
+{\color{VectorCoral}\bfseries Optional · Modeling challenge}
+
+\textbf{a) Let the dot product reveal the force.}
+For radial motion, $\vec v=\dot r\,\hat{\vec r}$ and
+$\vec F=F(r)\hat{\vec r}$. Dot Newton's law with velocity:
+\[
+\frac m2\frac{d(v^2)}{dt}=\vec F\cdot\vec v=F(r)\dot r.
+\]
+On either branch where $\dot r\ne0$, the chain rule gives
+\[
+\boxed{F(r)=\frac m2\frac{d(v^2)}{dr}.}
+\]
+The positive slope means repulsion, even on approach, when $\dot r<0$.
+The result extends to the turning point by continuity for a smooth force.
+
+\textbf{b) Infer the model, then the force.}
+Write $u^2-v^2=D/r^p$. The deficits at $\ell$, $2\ell$, and $4\ell$
+are $u^2$, $u^2/8$, and $u^2/64$. Doubling separation divides the
+deficit by eight, so $2^p=8$, $p=3$, and $D=u^2\ell^3$. Hence
+\[
+\boxed{v^2(r)=u^2\left(1-\frac{\ell^3}{r^3}\right),
+\qquad F(r)=\frac{3mu^2\ell^3}{2r^4}=\frac{C}{r^4}.}
+\]
+Here $C=3mu^2\ell^3/2$ is inferred from the original motion.
+Doubling separation divides the force by \textbf{sixteen}.
+The readings determine this model within the assumed power-law family;
+finitely many readings do not determine an arbitrary function uniquely.
+
+\textbf{c) Predict a new turning point.}
+Keep $C$ fixed: changing the incoming speed does not change the source.
+Integrating $d(v^2)/dr=2C/(mr^4)$ with incoming speed $w$ at infinity gives
+\[
+v^2=w^2-\frac{2C}{3mr^3}.
+\]
+At closest approach $v=0$. With $w=2u$,
+\[
+\boxed{r_{\min}^3=\frac{2C}{3m(2u)^2}=\frac{\ell^3}{4},
+\qquad r_{\min}=2^{-2/3}\ell\approx0.630\ell.}
+\]
+This is an \textbf{extrapolation} below the smallest tabulated separation.
+It assumes the inferred force law continues to hold there. The original
+expression for $v^2$ applies only to the original incoming speed.
+
+\textbf{d) Zero power does not imply zero force.}
+At a turning point $\vec v=\vec0$, so $d(v^2)/dt=2\vec v\cdot\vec a=0$
+even when acceleration is nonzero. For the original approach,
+\[
+\boxed{F(\ell)=\frac{3mu^2}{2\ell}>0.}
+\]
+The nonzero repulsion reverses the motion. Dividing the power equation by
+$\dot r$ exactly at the turn would be invalid; the force follows from the
+model and its continuous limit.
+
+\checkpoint{Motion can reveal a force law. A new prediction tests whether that law extends beyond the data used to infer it.}
+\end{document}

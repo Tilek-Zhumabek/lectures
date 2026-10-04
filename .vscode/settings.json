@@ -1,0 +1,43 @@
+{
+  "latex-workshop.latex.outDir": "%DIR%/build",
+  "latex-workshop.latex.recipe.default": "first",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "PDF in build, then clean",
+      "tools": ["latexmk-build", "latexmk-clean", "remove-empty-aux-directory"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk-build",
+      "command": "latexmk",
+      "args": [
+        "-pdf",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-file-line-error",
+        "-synctex=0",
+        "-outdir=%OUTDIR%",
+        "-auxdir=%DIR%/.latex-aux",
+        "-emulate-aux-dir",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "latexmk-clean",
+      "command": "latexmk",
+      "args": [
+        "-c",
+        "-outdir=%OUTDIR%",
+        "-auxdir=%DIR%/.latex-aux",
+        "-emulate-aux-dir",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "remove-empty-aux-directory",
+      "command": "rmdir",
+      "args": ["%DIR%/.latex-aux"]
+    }
+  ]
+}

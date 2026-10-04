@@ -1,0 +1,117 @@
+\documentclass[11pt,a4paper]{article}
+\input{exercise-style.tex}
+\rhead{\textcolor{VectorMuted}{Worked solutions}}
+
+\begin{document}
+\sessiontitle{Solutions: Motion hides in the timing}{Instructor copy · Exercise session 2}
+
+\problemheading{1}{Three snapshots, one missing story}
+
+\textbf{a) Reconstruct the motion.} With $\vec r_0=\vec0$, snapshots B and C give, in SI units,  
+\[
+\vec v_0+\tfrac12\vec a=(6,2),\qquad
+3\vec v_0+\tfrac92\vec a=(0,12).
+\]
+Subtract three times the first equation from the second:
+$3\vec a=(-18,6)$. Hence
+\[
+\boxed{\vec v_0=(9,1)\ \si{m/s},\qquad \vec a=(-6,2)\ \si{m/s^2}.}
+\]
+For use below, with $t$ in seconds,
+\[
+x=9t-3t^2,\quad y=t+t^2,\qquad v_x=9-6t,\quad v_y=1+2t.
+\]
+
+\textbf{b) A turn is not a stop.} The rightmost position occurs where $v_x=0$:
+\[
+\boxed{t=\SI{1.5}{s}.}
+\]
+Since $a_x<0$, the robot moves right before this time and left after it. At the turn,
+\[
+\vec v=(0,4)\ \si{m/s}.
+\]
+It is still moving in the positive $y$ direction, so it has not stopped.
+
+\textbf{c) Average velocity.} Divide the displacement from A to C by the full elapsed time:
+\[
+\boxed{\bar{\vec v}=\frac{(0,12)-(0,0)}{3}=(0,4)\ \si{m/s}.}
+\]
+\checkpoint{The snapshots are separated by 1 s and 2 s. They are not equally spaced in time.}
+
+\clearpage
+\problemheading{2}{A throw through a moving window}
+
+\textbf{a) Horizontal meeting.} The screen is at $x_s=8+2t$ and the ball at $x_b=6t$, with SI units understood. Thus
+\[
+6t=8+2t\quad\Longrightarrow\quad \boxed{t_c=\SI{2}{s}.}
+\]
+Both are then at $x=\SI{12}{m}$.
+
+\textbf{b) Clear the edges.} The ball's height is $y=ut-5t^2$, so at the crossing $y_c=2u-20$. The window requires
+\[
+3<2u-20<5\quad\Longrightarrow\quad
+\boxed{\SI{11.5}{m/s}<u<\SI{12.5}{m/s}.}
+\]
+The inequalities are strict because touching an edge does not count. The ball returns to ground at $t_g=2u/g$, between \SI{2.3}{s} and \SI{2.5}{s}, so every permitted launch is still airborne at the crossing.
+
+\textbf{c) Centre the throw.} The centre is at $y=\SI{4}{m}$. Set $2u-20=4$:
+\[
+\boxed{u=\SI{12}{m/s}.}
+\]
+At the window, the vertical velocity is
+\[
+v_y=u-gt_c=12-10\cdot2=\SI{-8}{m/s}.
+\]
+The ball is \textbf{falling} as it passes through the centre.
+
+\checkpoint{Match horizontal positions first. Then use that same time to check the height.}
+
+\clearpage
+\problemheading{3}{The slowest possible interception}
+{\color{VectorCoral}\bfseries Optional challenge}
+
+\textbf{a) Components and deadline.} Use $s$ uphill and $n$ normally away from the ramp. The target and ball obey
+\[
+s_T=L-\tfrac12g\sin\alpha\,t^2,\qquad n_T=0,
+\]
+\[
+s_B=v_{0s}t-\tfrac12g\sin\alpha\,t^2,\qquad
+n_B=v_{0n}t-\tfrac12g\cos\alpha\,t^2.
+\]
+Equating their positions at the meeting gives
+\[
+\boxed{v_{0s}=\frac Lt,\qquad v_{0n}=\frac{g\cos\alpha}{2}t,
+\qquad 0<t<t_b=\sqrt{\frac{2L}{g\sin\alpha}}.}
+\]
+The upper endpoint is excluded: the target must not yet have reached $O$.
+
+\textbf{b) Minimum without the deadline.} Write $c=g\cos\alpha/2$. Then
+\[
+v_0^2=\frac{L^2}{t^2}+c^2t^2
+=\left(\frac Lt-ct\right)^2+2Lc\ge gL\cos\alpha.
+\]
+Equality requires $L/t=ct$, so
+\[
+\boxed{t_*=\sqrt{\frac{2L}{g\cos\alpha}},\qquad
+v_{0,\min}=\sqrt{gL\cos\alpha}.}
+\]
+The two launch components are equal: the direction is $45^\circ$ above the ramp.
+
+\textbf{c) Restore the deadline.} The optimum is possible precisely when
+\[
+t_*<t_b\quad\Longleftrightarrow\quad\tan\alpha<1
+\quad\Longleftrightarrow\quad\alpha<45^\circ.
+\]
+For $\alpha\ge45^\circ$, the speed decreases throughout the allowed interval: $L/t-ct$ is positive and decreases there. Its limiting value occurs as $t\to t_b^-$:
+\[
+\boxed{\begin{aligned}
+0<\alpha<45^\circ:&\quad v_{0,\min}=\sqrt{gL\cos\alpha}\quad\text{(attained)},\\[3pt]
+45^\circ\le\alpha<90^\circ:&\quad v_0>\sqrt{\frac{gL}{2\sin\alpha}}\quad\text{(bound never attained)}.
+\end{aligned}}
+\]
+At $45^\circ$ the optimum occurs exactly at the forbidden deadline. For steeper ramps it occurs too late. In both cases a successful launch can approach the bound as closely as desired, but there is no slowest one.
+
+{\small\textbf{Flight check.} For any allowed meeting time $t$, at an earlier time $0<\tau<t$ the ball has
+$n_B(\tau)=\tfrac12g\cos\alpha\,\tau(t-\tau)>0$.
+It stays above the ramp until the meeting.}
+\end{document}

@@ -13,6 +13,7 @@ title-block-categories: false
 ::: {.lecture-links}
 [Open the handwritten slides](slides.html){.button .primary}
 [Previous: Vectors](../vectors/index.html){.button .secondary}
+[Next: Dynamics](../dynamics/index.html){.button .secondary}
 [All lectures](../../index.html){.button .secondary}
 ::: 
 
@@ -393,5 +394,5 @@ Splitting them into components allowed us to easily predict the peak of a projec
 ::: {.lecture-links}
 [Return to the handwritten slides](slides.html){.button .primary}
 [Review vectors](../vectors/index.html){.button .secondary}
+[Next: Dynamics — the dot product](../dynamics/index.html){.button .secondary}
 :::
- 

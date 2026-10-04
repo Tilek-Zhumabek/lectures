@@ -684,7 +684,7 @@ The displacement describes the start and finish. The distance describes the
 route taken between them.
 :::
 
-</details>
+</details> 
 
 
 
