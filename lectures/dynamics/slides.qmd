@@ -1,0 +1,491 @@
+---
+title: ""
+pagetitle: "Dynamics — the dot product opens the door to energy"
+author: "Tilek Zhumabek"
+format:
+  revealjs:
+    slide-level: 2
+    slide-number: c/t
+    navigation-mode: linear
+    progress: true
+    controls: true
+    transition: none
+    auto-stretch: false
+    theme: default
+    css: slides.css
+    html-math-method: mathml
+    width: 1280
+    height: 720
+    margin: 0.06
+    center: false
+    hash: true
+    pdf-separate-fragments: false
+    footer: '<a href="index.html">DYNAMICS · Full lecture notes ↗</a>'
+---
+
+## Dynamics {#dynamics .opening}
+
+<p class="chapter">Lecture 03 · Tilek Zhumabek</p>
+<p class="lead">The dot product opens<br>the door to energy.</p>
+<p class="route">A new operation → a physical law → a powerful shortcut</p>
+<p class="chalk-note">Our destination: find the height of a projectile without finding the time.</p>
+
+::: {.notes}
+Make the promise explicit: vectors are the language of physics. Today we keep
+the promise by learning a new operation before using it to open dynamics.
+The peak of this lecture is work and energy. Everything before it earns that result.
+:::
+
+## A new operation, a new part of physics {#promise}
+
+<div class="operation-row">
+<div><strong>+ and −</strong><p>Kinematics</p><small>Combine motions.<br>Find changes.</small></div>
+<div class="active"><strong>Dot product ·</strong><p>Dynamics</p><small>Measure alignment.<br>Find work and energy.</small></div>
+<div><strong>Cross product ×</strong><p>Rotational dynamics</p><small>Describe turning effects.<br>Torque comes next.</small></div>
+</div>
+
+<p class="spike">Vectors are the language.<br>Operations let us say new things.</p>
+
+::: {.notes}
+Recall the swimmer and the changing velocity from the first lecture. Do not
+teach the cross product here: this is a signpost. The new operation is the
+organising idea, not an assertion that earlier operations stop being useful.
+:::
+
+## What does the dot product see? {#alignment}
+
+<div class="board-grid equal">
+<div><img class="cover-art" src="../../assets/dynamics-cover.svg" alt="Force at an angle to velocity, with its projection along the motion."></div>
+<div>
+
+$$\mathbf A\cdot\mathbf B=AB\cos\theta.$$
+
+<p>It measures <em>alignment</em>.</p>
+<p>Same direction: positive.<br>Perpendicular: zero.<br>Opposite directions: negative.</p>
+</div>
+</div>
+
+::: {.notes}
+Push a trolley along its motion, against it, and sideways. Ask what changes.
+The definition comes before the dynamics. The projection is signed: beyond
+90 degrees it points against the other vector. Board 2 supplies the same geometry.
+:::
+
+## Extract the length from the arrow {#squared-length}
+
+<div class="board-window" style="aspect-ratio:820/195;--image-width:234.1463%;--image-left:-42.0732%;--image-top:-323.0769%"><img src="boards/002.jpg" alt="Original formula: A dot B equals AB cosine theta, or the sum of component products."></div>
+
+$$\mathbf A\cdot\mathbf A=A^2.$$
+
+<p class="prompt">Position → squared distance.<br>Velocity → squared speed.</p>
+<p class="chalk-note">Rotating the coordinate axes changes the components, not the dot product.</p>
+
+::: {.notes}
+The original board shows the two-dimensional component formula. In three
+dimensions add Az Bz. Our main use is A dot A. The dot product gives a scalar;
+this does not mean every moving observer measures the same value. The next
+section gives that distinction a physical setting.
+:::
+
+## One ball, two observers {#train}
+
+<div class="board-grid equal">
+<div><div class="board-window" style="aspect-ratio:450/470;--image-width:426.6667%;--image-left:-22.2222%;--image-top:-68.0851%"><img src="boards/001.jpg" alt="Original Earth and train reference frames, with position vectors from the two origins."></div></div>
+<div>
+<p>Throw a ball vertically inside a smoothly moving train.</p>
+<p>You see a vertical path.<br>The platform sees a parabola.</p>
+<p class="prompt">Which description is right?</p>
+</div>
+</div>
+
+::: {.notes}
+Both descriptions are right. The train has constant velocity U. Neglect air
+resistance. Use parallel nonrotating axes and coincident origins at t=0.
+Invite students to reconstruct the position sum from the previous lectures.
+:::
+
+## Different velocities. Same acceleration. {#galileo}
+
+$$\mathbf r=\mathbf U t+\mathbf r'.$$
+$$\mathbf v=\mathbf U+\mathbf v'.$$
+
+<div class="equation-peak">
+
+$$\mathbf a=\mathbf a'.$$
+
+</div>
+
+<p>The constant train velocity disappears on differentiation.</p>
+<p class="prompt">What determines the acceleration they agree on?</p>
+
+::: {.notes}
+Newtonian time is shared. Relative velocities and simultaneous separations
+also agree because the common frame terms cancel. Displacement over time
+does not: a seated passenger moves relative to the platform. Keep the main
+spoken point on acceleration. Galilean relativity says the mechanical laws
+have the same form in all inertial frames; it does not derive Newton's second law.
+:::
+
+## First law: free motion is the baseline {#first-law}
+
+<p class="chapter">Newton · Which frames can we use?</p>
+<p class="question">A free particle keeps a constant velocity.</p>
+
+$$\mathbf v=\text{constant}.$$
+
+<p>Frames in which free particles behave this way are <em>inertial frames</em>.</p>
+<p class="spike">Force changes motion.<br>It does not sustain uniform motion.</p>
+
+::: {.notes}
+Rest is one constant velocity, not a privileged condition. The smoothly moving
+train and platform are our ideal inertial frames. If the train brakes, the
+simple free-motion description no longer holds in the train frame. Do not
+develop fictitious forces now. Transition: what sets the amount of change?
+:::
+
+## Second law: add the forces on one body {#second-law}
+
+<div class="board-window" style="aspect-ratio:470/105;--image-width:408.5106%;--image-left:-68.0851%;--image-top:-396.1905%"><img src="boards/003.jpg" alt="Original board: the vector sum of forces equals mass times acceleration."></div>
+
+$$\boxed{\mathbf F_{\mathrm{net}}=\sum_i\mathbf F_i=m\mathbf a.}$$
+
+<p>Same force. Same mass. Same acceleration.<br>The train and platform use the same law.</p>
+<p class="chalk-note">Our particle has constant mass; forces are the Newtonian interactions used in this lecture.</p>
+
+::: {.notes}
+For a given net force, increasing mass decreases acceleration. For a given
+mass, increasing the force increases acceleration. First choose the body,
+then add all forces on it. This is the bridge from Galilean relativity:
+different velocity descriptions give the same acceleration equation.
+:::
+
+## Third law: an interaction has two sides {#third-law}
+
+$$\mathbf F_{A\to B}=-\mathbf F_{B\to A}.$$
+
+<p>Equal and opposite forces.<br><em>Different bodies.</em></p>
+
+<p class="chalk-line">Add the momentum equations of an isolated pair:</p>
+
+$$\frac{d}{dt}(\mathbf p_A+\mathbf p_B)=0,
+\qquad \mathbf p=m\mathbf v.$$
+
+<p class="prompt">Addition reveals momentum.<br>What will the dot product reveal?</p>
+
+::: {.notes}
+Keep this payoff brief. Internal forces cancel in the combined system equation,
+not in either individual body's equation. Introduce p as m v for constant
+mass. Do not suggest equal and opposite forces cancel their work: the points
+of application can move differently. Turn the attention to the dot product.
+:::
+
+## One derivative rule is enough {#product-rule}
+
+<p class="chapter">Make the new operation work on changing vectors</p>
+
+$$\frac{d}{dt}(\mathbf A\cdot\mathbf B)
+=\dot{\mathbf A}\cdot\mathbf B+\mathbf A\cdot\dot{\mathbf B}.$$
+
+<p>Each vector gets its turn to change.</p>
+
+<div class="equation-peak">
+
+$$\frac{d}{dt}(\mathbf A\cdot\mathbf A)=2\mathbf A\cdot\dot{\mathbf A}.$$
+
+</div>
+
+<p class="prompt">Use it for position. Then use it for velocity.</p>
+
+::: {.notes}
+This is the product rule. Linearity is the separate rule for differentiating
+a sum. A dot over a symbol means its time derivative. If needed, prove the
+identity by applying the ordinary product rule to Ax Bx + Ay By. Avoid a
+catalogue of derivative notation. The students need this one usable tool.
+:::
+
+## Are we moving farther away? {#distance-change}
+
+$$\frac{d}{dt}r^2=2\mathbf r\cdot\mathbf v.$$
+
+<div class="three-signs">
+<div><strong>Positive</strong><p>Farther away.</p></div>
+<div><strong>Negative</strong><p>Coming closer.</p></div>
+<div><strong>Zero</strong><p>Distance is momentarily unchanged.</p></div>
+</div>
+
+<p class="question">What if the distance stays fixed?</p>
+<p class="chalk-note">Measure position from a fixed origin.</p>
+
+::: {.notes}
+r squared is squared distance from that origin. At a nonzero radius its rate
+has the same sign as the distance's rate. Zero at just one instant does not
+mean circular motion. Now impose a fixed radius throughout the motion, in a plane.
+:::
+
+## A circle gives us its own acceleration {#circle}
+
+<p>Fixed radius: $r=R$. So $\mathbf r\cdot\mathbf v=0$ throughout the motion.</p>
+
+$$0=\frac{d}{dt}(\mathbf r\cdot\mathbf v)
+=v^2+\mathbf r\cdot\mathbf a.$$
+
+<div class="board-window" style="aspect-ratio:340/115;--image-width:564.7059%;--image-left:-151.4706%;--image-top:-617.3913%"><img src="boards/004.jpg" alt="Original product-rule result: v dot v plus r dot a equals zero, so r dot a equals minus speed squared."></div>
+
+$$\boxed{a_{\mathrm{in}}=\frac{v^2}{R}.}$$
+
+<p class="chalk-note">This is the inward component. At constant speed, it is the whole acceleration.</p>
+
+::: {.notes}
+This is our first hill: geometry plus one derivative produces centripetal
+acceleration. With r pointing outward, r dot a = -R a_in. The negative sign
+requires an inward component. The original board's final magnitude assumes
+constant speed; the authored statement gives the component directly.
+:::
+
+## Now ask about speed {#speed-change}
+
+<p>Use the same rule on $\mathbf v\cdot\mathbf v$:</p>
+
+<div class="equation-peak">
+
+$$\frac{d}{dt}v^2=2\mathbf v\cdot\mathbf a.$$
+
+</div>
+
+<div class="three-signs">
+<div><strong>Along</strong><p>Speed increases.</p></div>
+<div><strong>Against</strong><p>Speed decreases.</p></div>
+<div><strong>Across</strong><p>Direction changes.</p></div>
+</div>
+
+::: {.notes}
+The right side is an alignment test. Students can now see why acceleration
+does not simply mean speeding up. The perpendicular statement is instantaneous;
+for uniform circular motion it holds throughout. We are ready to bring force
+back into the story.
+:::
+
+## Turning and speeding up are different jobs {#turn-or-speed}
+
+<p class="question">A car goes around a circle at constant speed.<br>Is it accelerating?</p>
+
+$$\mathbf r\cdot\mathbf a=-v^2,
+\qquad \mathbf v\cdot\mathbf a=0.$$
+
+<p class="spike">Its direction changes.<br>Its speed does not.</p>
+<p class="chalk-line">Now replace acceleration with force.</p>
+
+::: {.notes}
+Pause and let students answer before unpacking the equations. The two dot
+products ask different questions of the same acceleration. This is the valley
+before the main derivation: a concrete physical picture, not another new tool.
+:::
+
+## Newton's law becomes an energy equation {#energy}
+
+$$\mathbf F_{\mathrm{net}}\cdot\mathbf v
+=m\mathbf a\cdot\mathbf v
+=\frac{d}{dt}\left(\frac12mv^2\right).$$
+
+<div class="equation-peak">
+
+$$\boxed{\frac{dK}{dt}=\mathbf F_{\mathrm{net}}\cdot\mathbf v,
+\quad K=\frac12mv^2.}$$
+
+</div>
+
+<p class="spike">The force along the motion<br>changes kinetic energy.</p>
+
+::: {.notes}
+This is the main peak. Slow down. Start at F = m a, dot with v, and recognise
+the derivative we have just earned. The half cancels the two in the product
+rule. Name K kinetic energy and F dot v power. Do not bury this moment in
+extra identities. Let students say why a perpendicular force gives zero power.
+:::
+
+## Add the small changes: work {#work}
+
+<div class="board-grid equal">
+<div><div class="board-window" style="aspect-ratio:805/535;--image-width:238.5093%;--image-left:-6.8323%;--image-top:-92.5234%"><img src="boards/005.jpg" alt="Original derivation: mass times acceleration dot displacement equals the differential of kinetic energy."></div></div>
+<div>
+
+$$d\mathbf r=\mathbf v\,dt.$$
+$$dK=\mathbf F_{\mathrm{net}}\cdot d\mathbf r.$$
+
+<p>Add along the path:</p>
+
+$$\boxed{\Delta K=\int\mathbf F_{\mathrm{net}}\cdot d\mathbf r=W_{\mathrm{net}}.}$$
+
+</div>
+</div>
+
+<p class="chalk-note">For a constant force: $W=\mathbf F\cdot\Delta\mathbf r$. Work and energy are measured in joules.</p>
+
+::: {.notes}
+Connect the integral with Lecture 2's sum of tiny displacements. Work sums
+the force component along those displacements. For a varying force we must
+sum along the path; the single endpoint dot product is for a constant force.
+The displayed identity is the work–energy theorem for a particle.
+:::
+
+## A force can act without doing work {#no-work}
+
+<p class="question">Uniform circular motion needs an inward force.</p>
+
+$$F_{\mathrm{in}}=\frac{mv^2}{R}.$$
+
+<p>But the force is perpendicular to every tiny displacement.</p>
+
+$$\mathbf F_{\mathrm{net}}\cdot d\mathbf r=0
+\quad\Longrightarrow\quad \Delta K=0.$$
+
+<p class="prompt">The force turns the motion.<br>It does not change the speed.</p>
+
+::: {.notes}
+Let this surprising consequence land. Nonzero force does not imply nonzero
+work. Use an ideal particle on a fixed circle with a purely radial net force.
+Now we have a practical reason to ask an energy question instead of solving
+all components of motion.
+:::
+
+## The projectile returns {#projectile}
+
+<img class="board-full" src="boards/006.jpg" alt="Original projectile board, with the height question and the work–energy derivation.">
+<p class="prompt">Find the height. This time, do not find the time.</p>
+
+::: {.notes}
+Recall the previous lecture's projectile and the zero vertical velocity at
+the top. The original board is the destination we are now ready to understand.
+Uniform gravity, no drag, and height measured above launch. Move straight to
+the work argument rather than re-deriving the trajectory.
+:::
+
+## Gravity only counts the height change {#gravity-work}
+
+$$W=m\mathbf g\cdot\Delta\mathbf r=-mgh.$$
+
+<p>Horizontal steps contribute zero.<br>Upward steps contribute negative work.</p>
+
+<p class="chalk-line">At the top, only the horizontal velocity remains:</p>
+
+$$v_{\mathrm{top}}=v_0\cos\alpha.$$
+
+<p class="prompt">Now compare the kinetic energies.</p>
+
+::: {.notes}
+Gravity is a constant vector, so it can be dotted with the total displacement.
+The horizontal projection is zero. This is precisely where the dot product
+does physical work for us: the irrelevant horizontal displacement disappears.
+The top has zero vertical velocity, not generally zero speed.
+:::
+
+## The same height. A new route. {#height}
+
+$$-mgh=\frac12m v_0^2\cos^2\alpha-\frac12m v_0^2.$$
+
+<div class="equation-peak">
+
+$$\boxed{h=\frac{v_0^2\sin^2\alpha}{2g}.}$$
+
+</div>
+
+<p class="spike">No flight time.<br>No trajectory equation.</p>
+
+::: {.notes}
+This is the second peak and the promised payoff. Cancel mass and recognise
+one minus cosine squared. We got the Lecture 2 answer with a new language.
+If useful, say that rearranging delta K = -mg delta y gives K + mgy constant,
+introducing gravitational potential energy without starting a new topic.
+:::
+
+## Your turn: what is left at the top? {#practice}
+
+<p>Launch at $20\ \mathrm{m/s}$ and $30^\circ$.</p>
+
+<p class="question">How high does it go?<br>How fast is it still moving at the top?</p>
+
+<p class="chalk-note">Use $g=9.8\ \mathrm{m/s^2}$. Start by identifying which component survives.</p>
+
+::: {.notes}
+Pause for student calculation. The height is 400 times 0.25 divided by 19.6,
+or about 5.10 m. The top speed is 20 cos 30 degrees, about 17.3 m/s. If a
+student sets the top kinetic energy to zero, ask them about horizontal motion.
+These answers remain in private speaker notes; the full notes offer a solution.
+:::
+
+## Back to the two observers {#observers}
+
+$$\mathbf v'=\mathbf v-\mathbf U,
+\qquad K'=\frac12m|\mathbf v-\mathbf U|^2.$$
+
+<p class="question">Does the train observer measure<br>the same kinetic energy?</p>
+
+<p class="prompt">Change the observer. Keep the throw.</p>
+<p><a href="index.html#frame-explorer" target="_blank" rel="noopener">Open the two-observer experiment ↗</a></p>
+
+::: {.notes}
+Open the interactive notes in a separate tab. It starts at the apex. First
+leave U=0, then press the button to set U=12 m/s. The moving observer sees a
+vertical throw and zero speed at the top. The ground observer sees nonzero
+horizontal speed. Ask which quantities changed and which did not.
+:::
+
+## Different energies. The same law. {#same-law}
+
+<p>For the experiment: $m=1\ \mathrm{kg}$ and
+$\mathbf v_0=(12,16)\ \mathrm{m/s}$.</p>
+
+<div class="operation-row">
+<div><strong>Ground</strong><p>$K_i=200\ \mathrm J$<br>$K_{\mathrm{top}}=72\ \mathrm J$</p></div>
+<div><strong>Moving at 12 m/s</strong><p>$K'_i=128\ \mathrm J$<br>$K'_{\mathrm{top}}=0$</p></div>
+<div class="active"><strong>Both</strong><p>$\Delta K=-128\ \mathrm J$<br>$W=-128\ \mathrm J$</p></div>
+</div>
+
+<p class="prompt">Each observer finds $W_{\mathrm{net}}=\Delta K$.</p>
+<p class="chalk-note">Here the frame shift is horizontal and gravity is vertical, so the work is the same too.</p>
+
+::: {.notes}
+K is a scalar under rotating the axes but is not invariant under changing
+observer velocity. For this horizontal boost the energy change agrees;
+in general work and energy change can both change. The law survives because
+both sides change together. The optional algebra is in the reading notes.
+:::
+
+## Keep one idea and one result {#remember}
+
+<p class="chapter">The dot product measures alignment</p>
+
+$$\frac{d}{dt}(\mathbf A\cdot\mathbf A)=2\mathbf A\cdot\dot{\mathbf A}.$$
+
+<p>Position: approaching, receding, turning.<br>Velocity + Newton: work and energy.</p>
+
+<div class="equation-peak">
+
+$$\boxed{W_{\mathrm{net}}=\Delta K.}$$
+
+</div>
+
+<p class="takeaway">Use it when you want speed or height<br>without the whole motion in time.</p>
+
+::: {.notes}
+Do not end with a catalogue of equally weighted formulas. One operation,
+one reusable derivative pattern, one main physical result. Ask students to
+explain why the projectile example was shorter with this tool.
+:::
+
+## Next: the cross product {#next}
+
+<p class="chapter">Keep the promise going</p>
+<p class="lead">A force can speed something up.<br>A force can also turn something.</p>
+
+<p class="spike">How does the point where we push<br>change the turning effect?</p>
+
+<p class="route">Cross product → torque → rotational dynamics</p>
+<p><a href="index.html">Read the full lecture ↗</a></p>
+
+::: {.notes}
+Use a door: pushing near the hinge and far from it are different. This is a
+preview question, not a new derivation. Distinguish the rotational turning
+effect about an axis from the earlier change of a particle's velocity direction.
+Close the arc: operations in the vector language open new parts of physics.
+:::

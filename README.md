@@ -1,7 +1,53 @@
 # Physics lecture website
 
 A Quarto website with full lecture notes, a 27-slide vectors lecture, and a
-19-slide motion lecture built around the original handwritten whiteboards.
+19-slide motion lecture built around the original handwritten whiteboards, and
+a 25-slide dynamics lecture introducing the dot product through work and energy.
+
+## Dynamics lecture
+
+`lectures/dynamics/index.qmd` and `lectures/dynamics/slides.qmd` keep the course's
+opening promise: addition/subtraction → kinematics; dot product → dynamics;
+cross product → rotational dynamics. The new operation comes first, followed
+by Galilean frames and Newton's laws, the product rule, circular acceleration,
+and the central work–energy derivation. Projectile height is the final payoff.
+Optional details hold notation, momentum conservation, further identities,
+and the algebra of changing frames.
+
+The six original September 22 whiteboards are preserved in
+`lectures/dynamics/boards/`. Slide viewports frame selected regions without
+altering the source images. The notes also link all six originals.
+`frame-explorer.js` provides an accessible, local two-observer projectile
+experiment with controls for observer velocity and time; it needs no libraries
+or network access. Both plots share the same spatial scales. The no-JavaScript
+fallback explains the same numerical comparison.
+
+Preview with `quarto preview lectures/dynamics/slides.qmd --profile teach`.
+For an offline deck, use `quarto render lectures/dynamics/slides.qmd --profile
+share --output dynamics-offline.html`. The interactive experiment belongs to
+the notes page; the deck links to it. A whole-site render adds lecture 3 to the
+home page automatically. Public builds strip private speaker notes.
+
+### Exercise session 3
+
+`lectures/dynamics/exercise-session.tex` contains three problems centred on
+dot products without coordinates: recovering a force magnitude and angle from
+three speed readings, deriving the tension between two free particles from
+their fixed separation, and finding the slowest throw to a target and the
+right angle between its launch and arrival velocities. The third is an optional
+challenge. Only elementary Newtonian dynamics is needed; the exercises do not
+use work, power, or energy. Each problem has a labelled diagram and three
+questions. `exercise-session-solutions.tex` contains the derivations using
+vector equations and squared lengths throughout.
+
+Run `make -C lectures/dynamics` to build the student worksheet and worked
+solutions in `lectures/dynamics/build/`.
+
+The workspace's LaTeX Workshop recipe uses the same output layout as the
+lecture Makefiles: PDFs go into the source document's `build/` directory,
+temporary files go into `.latex-aux/`, and successful builds clean up the
+temporary files and directory. Open `Second year` as the editor workspace
+to use these settings.
 
 ## Motion lecture
 
@@ -20,6 +66,17 @@ Preview the deck with `quarto preview lectures/motion/slides.qmd --profile teach
 For an offline copy, use `quarto render lectures/motion/slides.qmd --profile share
 --output motion-offline.html` (the shared profile otherwise defaults to the
 vectors filename). The normal whole-site render includes both lecture cards.
+
+### Exercise session 2
+
+`lectures/motion/exercise-session.tex` contains three problems: reconstructing
+motion from snapshots, throwing through a moving window, and an optional, very
+difficult interception challenge combining projectiles and an incline. The
+separate `exercise-session-solutions.tex` contains the worked solutions.
+
+Run `make -C lectures/motion` to build both PDFs in `lectures/motion/build/`.
+Both PDFs have three pages. Each student problem uses a labelled diagram and
+three short questions.
 
 ## Preview and build
 

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="title desc">
+  <title id="title">The dot product opens dynamics</title>
+  <desc id="desc">A force at an angle to motion is projected along the velocity. The aligned part changes speed.</desc>
+  <defs><marker id="green" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="none" stroke="#216343" stroke-width="1.5"/></marker><marker id="coral" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 8 4 0 8" fill="none" stroke="#ad5438" stroke-width="1.5"/></marker></defs>
+  <circle cx="125" cy="280" r="9" fill="#203b31"/>
+  <path d="M125 280H490" stroke="#216343" stroke-width="5" marker-end="url(#green)"/>
+  <path d="M125 280 380 100" stroke="#ad5438" stroke-width="5" marker-end="url(#coral)"/>
+  <path d="M380 108V280" stroke="#5f7468" stroke-width="2" stroke-dasharray="6 8"/>
+  <path d="M360 280V260H380" fill="none" stroke="#5f7468" stroke-width="2"/>
+  <path d="M125 316H380" stroke="#ad5438" stroke-width="4" marker-end="url(#coral)"/>
+  <path d="M190 280A65 65 0 0 0 178 242" stroke="#5f7468" stroke-width="2" fill="none"/>
+  <g font-family="Georgia,serif" font-style="italic" font-size="32"><text x="395" y="105" fill="#ad5438">F</text><text x="498" y="278" fill="#216343">v</text><text x="204" y="263" fill="#5f7468">θ</text></g>
+  <text x="200" y="357" font-family="system-ui,sans-serif" font-size="22" fill="#ad5438">F cos θ</text>
+  <text x="125" y="55" font-family="system-ui,sans-serif" font-size="18" letter-spacing="3" fill="#216343">ALIGNMENT → ENERGY</text>
+</svg>
