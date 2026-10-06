@@ -4,6 +4,29 @@ A Quarto website with full lecture notes, a 27-slide vectors lecture, and a
 19-slide motion lecture built around the original handwritten whiteboards, and
 a 25-slide dynamics lecture introducing the dot product through work and energy.
 
+## Dynamics II lecture
+
+`lectures/dynamics-2/` holds the September 29 lecture on potential energy,
+conservative forces, energy conservation, and impulse–momentum. There are no
+notes or slides yet. The six original whiteboards are preserved in
+`lectures/dynamics-2/boards/`, with `whiteboards.pdf` combining them in order.
+
+### Exercise session 4
+
+`lectures/dynamics-2/exercise-session.tex` contains two problems. "One
+gravity, two potentials" starts from the lecture's two gravitational
+potentials, mgr and −GMm/r. Using F = −dU/dr, students show that mgh is the
+tangent line to −GMm/r at the surface. They then redo the vertical throw
+with the exact potential, finding the speeds that reach a height of one
+Earth radius and that escape. "The string that eats energy" puts slack in the pulley
+example, with questions for each stage: free fall, the jerk (impulse, average
+tension, energy lost) and the taut string. An optional part sums the
+repeated jerks as a geometric series. `exercise-session-solutions.tex` has
+the worked solutions.
+
+Run `make -C lectures/dynamics-2` to build both PDFs in
+`lectures/dynamics-2/build/`.
+
 ## Dynamics lecture
 
 `lectures/dynamics/index.qmd` and `lectures/dynamics/slides.qmd` keep the course's
