@@ -16,7 +16,7 @@
         "-interaction=nonstopmode",
         "-halt-on-error",
         "-file-line-error",
-        "-synctex=0",
+        "-synctex=1",
         "-outdir=%OUTDIR%",
         "-auxdir=%DIR%/.latex-aux",
         "-emulate-aux-dir",
