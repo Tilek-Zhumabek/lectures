@@ -17,3 +17,10 @@ _site/
 
 # Exams stay local: the repository is published to GitHub.
 exams/
+
+# Exercise sessions, their solutions and their PDFs stay local too.
+lectures/*/exercise-*.tex
+lectures/*/build/
+
+# Personal administrative documents stay local.
+Administrative documents/

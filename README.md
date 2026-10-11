@@ -11,22 +11,6 @@ conservative forces, energy conservation, and impulse–momentum. There are no
 notes or slides yet. The six original whiteboards are preserved in
 `lectures/dynamics-2/boards/`, with `whiteboards.pdf` combining them in order.
 
-### Exercise session 4
-
-`lectures/dynamics-2/exercise-session.tex` contains two problems. "One
-gravity, two potentials" starts from the lecture's two gravitational
-potentials, mgr and −GMm/r. Using F = −dU/dr, students show that mgh is the
-tangent line to −GMm/r at the surface. They then redo the vertical throw
-with the exact potential, finding the speeds that reach a height of one
-Earth radius and that escape. "The string that eats energy" puts slack in the pulley
-example, with questions for each stage: free fall, the jerk (impulse, average
-tension, energy lost) and the taut string. An optional part sums the
-repeated jerks as a geometric series. `exercise-session-solutions.tex` has
-the worked solutions.
-
-Run `make -C lectures/dynamics-2` to build both PDFs in
-`lectures/dynamics-2/build/`.
-
 ## Dynamics lecture
 
 `lectures/dynamics/index.qmd` and `lectures/dynamics/slides.qmd` keep the course's
@@ -51,27 +35,6 @@ share --output dynamics-offline.html`. The interactive experiment belongs to
 the notes page; the deck links to it. A whole-site render adds lecture 3 to the
 home page automatically. Public builds strip private speaker notes.
 
-### Exercise session 3
-
-`lectures/dynamics/exercise-session.tex` contains three problems centred on
-dot products without coordinates: recovering a force magnitude and angle from
-three speed readings, deriving the tension between two free particles from
-their fixed separation, and finding the slowest throw to a target and the
-right angle between its launch and arrival velocities. The third is an optional
-challenge. Only elementary Newtonian dynamics is needed; the exercises do not
-use work, power, or energy. Each problem has a labelled diagram and three
-questions. `exercise-session-solutions.tex` contains the derivations using
-vector equations and squared lengths throughout.
-
-Run `make -C lectures/dynamics` to build the student worksheet and worked
-solutions in `lectures/dynamics/build/`.
-
-The workspace's LaTeX Workshop recipe uses the same output layout as the
-lecture Makefiles: PDFs go into the source document's `build/` directory,
-temporary files go into `.latex-aux/`, and successful builds clean up the
-temporary files and directory. Open `Second year` as the editor workspace
-to use these settings.
-
 ## Motion lecture
 
 `lectures/motion/index.qmd` contains the explanations and worked examples;
@@ -90,17 +53,6 @@ For an offline copy, use `quarto render lectures/motion/slides.qmd --profile sha
 --output motion-offline.html` (the shared profile otherwise defaults to the
 vectors filename). The normal whole-site render includes both lecture cards.
 
-### Exercise session 2
-
-`lectures/motion/exercise-session.tex` contains three problems: reconstructing
-motion from snapshots, throwing through a moving window, and an optional, very
-difficult interception challenge combining projectiles and an incline. The
-separate `exercise-session-solutions.tex` contains the worked solutions.
-
-Run `make -C lectures/motion` to build both PDFs in `lectures/motion/build/`.
-Both PDFs have three pages. Each student problem uses a labelled diagram and
-three short questions.
-
 ## Preview and build
 
 Install [Quarto](https://quarto.org), then run these commands from this folder:
@@ -113,6 +65,15 @@ quarto render
 The built website is in `_site/`. Edit the source files, not the generated HTML.
 The site uses system fonts and native MathML; reading the mathematics requires
 no external scripts.
+
+Exercise sessions (`lectures/*/exercise-*.tex` and their PDFs in
+`lectures/*/build/`) stay local, like `exams/`; `.gitignore` keeps them out of
+the public repository. Run `make -C lectures/<name>` to build a lecture's
+worksheet and solutions. The workspace's LaTeX Workshop recipe uses the same
+output layout: PDFs go into the source document's `build/` directory,
+temporary files go into `.latex-aux/`, and successful builds clean up the
+temporary files and directory. Open `Second year` as the editor workspace
+to use these settings.
 
 ## Content and sequence
 
